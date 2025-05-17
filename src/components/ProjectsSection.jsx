@@ -1,100 +1,267 @@
-import React from 'react'
-import { ArrowRight, ExternalLink } from 'lucide-react'
-import { Github } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react'
+
 const projects = [
+
+    // AI-Powered Canvas
     {
         id: 1,
-        title: "Java MVC E-Commerce System",
-        description: "An e-commerce application built using Java Servlets, JSP, and the MVC architecture and styled with Tailwind CSS",
-        image: "/projects/jsp-ecommerce.png",
-        tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind"],
-        url: "https://github.com/nirmal-404/oop-group-project"
+        title: "AI-Powered Canvas",
+        description: "An AI-powered canvas capable of solving equations, recognizing drawings. - powered by Gemini API.",
+        image: "/projects/ai-canvas.png",
+        tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
+        ]
     },
+
+    // MERN Stack E-Commerce Platform
     {
         id: 2,
         title: "MERN Stack E-Commerce Platform",
         description: "An e-commerce platform built with the MERN stack. Integrations with payment gateways and email services.",
         image: "/projects/mern-ecommerce.png",
         tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind", "ShadCN UI"],
-        url: "https://github.com/nirmal-404/Rasaa-Spices"
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
+        ]
     },
+
+    // Java MVC E-Commerce System
     {
         id: 3,
-        title: "AI-Powered Canvas",
-        description: "An AI-powered canvas capable of solving equations, recognizing drawings. - powered by Gemini API.",
-        image: "/projects/ai-canvas.png",
-        tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini"],
-        url: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor.git"
+        title: "Java MVC E-Commerce System",
+        description: "An e-commerce application built using Java Servlets, JSP, and the MVC architecture and styled with Tailwind CSS",
+        image: "/projects/jsp-ecommerce.png",
+        tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/oop-group-project" },
+        ]
+    },
+
+    // PyQt5 GUI Projects
+    {
+        id: 4,
+        title: "PyQt5 GUI Projects",
+        description: "A collection of simple desktop apps built with PyQt5, including a weather app, stopwatch, and digital clock.",
+        image: "/projects/pyqt5-gui-projects.jpg",
+        tags: ["Python", "PyQt5"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/python" },
+        ]
+    },
+    // microservices restapi - social media microservice
+    {
+        id: 5,
+        title: "Microservices REST API",
+        description: "A modular REST API built using a microservices architecture *Redis caching *rate limiting *RabbitMQ.",
+        image: "/projects/nodejs-microservices-backend.png",
+        tags: ["Node.js", "Express", "Redis", "Docker", "RabbitMQ", "Cloudinary"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/node-concepts-IN/tree/main/social-media-microservice" }
+        ]
+    },
+    {
+        id: 6,
+        title: "Postgres REST API",
+        description: "A REST API using PostgreSQL and Prisma ORM - Graphana",
+        image: "/projects/docker-prisma-prometheus-graphan.png",
+        tags: ["PostgreSQL", "Prisma", "Prometheus", "Grafana", "Docker"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/node-concepts-ad/tree/main/postgres/postgress-with-prisma" }
+        ]
     }
 ]
+
 const ProjectsSection = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
+
+    // Calculate how many projects to show based on screen size
+    const [projectsPerView, setProjectsPerView] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                setProjectsPerView(1);
+            } else if (window.innerWidth < 1024) {
+                setProjectsPerView(2);
+            } else {
+                setProjectsPerView(3);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const totalSlides = Math.ceil(projects.length / projectsPerView);
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+    };
+
+    const goToSlide = (slideIndex) => {
+        setCurrentSlide(slideIndex);
+    };
+
+    // Handle touch events for mobile swipe
+    const handleTouchStart = (e) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStart - touchEnd > 50) {
+            nextSlide();
+        }
+        if (touchStart - touchEnd < -50) {
+            prevSlide();
+        }
+    };
+
+    // Get current visible projects
+    const visibleProjects = () => {
+        const startIndex = currentSlide * projectsPerView;
+        return projects.slice(startIndex, startIndex + projectsPerView);
+    };
+
     return (
         <section id="projects" className="py-24 px-4 relative">
-            <div className="container mx-auto max-w-5xl">
+            <div className="container mx-auto max-w-7xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-                    Featured <span className="text-primary"> Projects </span>
+                    Featured <span className="text-primary">Projects</span>
                 </h2>
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                    Here are some of my recent projects i did as a student
+                    Here are some of my recent projects I did as a student
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, key) => (
-                        <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-                            <div className="h-48 overflow-hidden">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                />
-                            </div>
+                <div className="relative">
+                    {/* Navigation Buttons */}
+                    <button
+                        onClick={prevSlide}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-primary text-white hover:bg-primary/80 shadow-lg rounded-full p-3 transition-all duration-300"
+                        aria-label="Previous slide"
+                    >
+                        <ChevronLeft className="w-6 h-6" />
+                    </button>
 
-                            <div className="p-6 flex-grow flex flex-col">
+                    <div
+                        className="overflow-hidden"
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
+                    >
+                        <div
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                        >
+                            {projects.map((project, index) => (
+                                <div
+                                    key={project.id}
+                                    className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
+                                >
+                                    <div className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                                        <div className="h-48 overflow-hidden">
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                            />
+                                        </div>
+                                        <div className="p-6 flex flex-col h-64">
+                                            <div className="flex flex-wrap gap-2 mb-4">
+                                                {project.tags.map((tag, index) => (
+                                                    <span
+                                                        key={index}
+                                                        className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                                {project.tags.length > 3 && (
+                                                    <span className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground">
+                                                        +{project.tags.length - 3}
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                                            <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
+                                            <div className="mt-auto pt-2 border-t">
+                                                <div className="flex justify-between items-center">
+                                                    {project.urls.map((url, index) => (
+                                                        <a
+                                                            key={index}
+                                                            href={url.href}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-foreground/80 hover:text-primary transition-colors duration-300 flex items-center gap-2"
+                                                            aria-label={url.type === "github" ? "View Source on GitHub" : "See Demo"}
+                                                        >
+                                                            {url.type === "github" ? (
+                                                                <>
+                                                                    <Github className="w-5 h-5" />
+                                                                    <span className="text-sm">View Source</span>
+                                                                </>
+                                                            ) : url.type === "external" ? (
+                                                                <>
+                                                                    <ExternalLink className="w-5 h-5" />
+                                                                    <span className="text-sm">See demo</span>
+                                                                </>
+                                                            ) : null}
+                                                        </a>
+                                                    ))}
+                                                </div>
 
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tags.map((tag, index) => (
-                                        <span
-                                            key={index}
-                                            className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-
-                                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
-
-                                <div className="mt-auto pt-2 border-t">
-                                    <div className="flex justify-between items-center">
-                                        <div className="flex space-x-3">
-                                            {/* <a
-                                                href="#"
-                                                target="_blank"
-                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                                aria-label="Live Demo"
-                                            >
-                                                <ExternalLink className="w-5 h-5" />
-                                            </a> */}
-                                            <a
-                                                href={project.url}
-                                                target="_blank"
-                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                                aria-label="View Source on GitHub"
-                                            >
-                                                <Github className="w-5 h-5" />
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
-                    )).reverse()}
+                    </div>
+
+                    <button
+                        onClick={nextSlide}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-primary text-white hover:bg-primary/80 shadow-lg rounded-full p-3 transition-all duration-300"
+                        aria-label="Next slide"
+                    >
+                        <ChevronRight className="w-6 h-6" />
+                    </button>
                 </div>
+
+                {/* Dots Navigation */}
+                <div className="flex justify-center mt-8 space-x-2">
+                    {Array.from({ length: totalSlides }).map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
+                                ? "bg-primary w-6"
+                                : "bg-primary/30 hover:bg-primary/50"
+                                }`}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
+                    ))}
+                </div>
+
                 <div className='text-center mt-12'>
-                    <a href="https://github.com/nirmal-404" target='_blank' className='cosmic-button w-fit flex items-center mx-auto gap-2'>
-                    Check my GitHub <ArrowRight size={16}/>
+                    <a
+                        href="https://github.com/nirmal-404"
+                        target='_blank'
+                        rel="noopener noreferrer"
+                        className='cosmic-button w-fit flex items-center mx-auto gap-2'
+                    >
+                        Check my GitHub <ArrowRight size={16} />
                     </a>
                 </div>
             </div>

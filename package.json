@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-toast": "^1.2.13",
     "@tailwindcss/vite": "^4.1.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "keen-slider": "^6.8.6",
     "lucide-react": "^0.510.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

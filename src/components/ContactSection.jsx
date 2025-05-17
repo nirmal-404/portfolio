@@ -1,27 +1,59 @@
 import React from 'react'
-import { Facebook, Linkedin, Mail, MapPin, Phone, Send, Loader} from "lucide-react"
+import { Facebook, Linkedin, Mail, MapPin, Phone, Send, Loader } from "lucide-react"
 import { cn } from '@/lib/utils'
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
 
-    const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const { toast } = useToast();
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+    e.preventDefault();
+    setIsSubmitting(true);
 
-        setIsSubmitting(true);
+    const form = e.target;
+    const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+    };
 
-        setTimeout(() => {
+    const serviceID = 'service_xp3wldk';
+    const toYouTemplateID = 'template_xfgqalb'; // This one sends the user's message to YOU
+    const autoReplyTemplateID = 'template_ofqjr05'; // This is the auto-reply to the user
+    const publicKey = 'lxhqJYg0WO06T4YRb';
+
+    // First, send message to YOU
+    emailjs
+        .send(serviceID, toYouTemplateID, data, publicKey)
+        .then(() => {
+            // Then, send auto-reply to USER
+            return emailjs.send(serviceID, autoReplyTemplateID, data, publicKey);
+        })
+        .then(() => {
             toast({
                 title: "Message sent!",
-                description: "Thank you for your message. I'll get back to you soon.",
+                description: "Thanks for your message. I'll respond asap.",
             });
+            form.reset();
+        })
+        .catch((err) => {
+            toast({
+                title: "Error",
+                description: "Failed to send message. Try again later.",
+                variant: "destructive",
+            });
+            console.error(err);
+        })
+        .finally(() => {
             setIsSubmitting(false);
-        }, 1500);
-    };
+        });
+};
+
+
 
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -78,7 +110,7 @@ const ContactSection = () => {
                                     <MapPin className="h-6 w-6 text-primary" />{" "}
                                 </div>
                                 <div>
-                                    <h4>Email</h4>
+                                    <h4>Location</h4>
                                     <a className='text-muted-foreground hover:text-primary transition-colors'>
                                         Gampaha, Western Province, Sri Lanka
                                     </a>
@@ -117,16 +149,16 @@ const ContactSection = () => {
                             </div>
 
                             <div>
-                                <label htmlFor="name" className='block text-sm font-medium mb-2'>{" "} Your message</label>
-                                <textarea type="text" id="name" name='name' required className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none' placeholder="Hello, I'd like to talk about..." />
+                                <label htmlFor="message" className='block text-sm font-medium mb-2'>{" "} Your message</label>
+                                <textarea type="text" id="message" name='message' required className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none' placeholder="Hello, I'd like to talk about..." />
                             </div>
 
                             <button type='submit'
                                 className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
                                 {isSubmitting ? "Sending..." : "Send Message"}
-                                {isSubmitting ? <Loader size={16} /> : <Send size={16} /> }
-                                
-                                
+                                {isSubmitting ? <Loader size={16} /> : <Send size={16} />}
+
+
                             </button>
                         </form>
                     </div>
