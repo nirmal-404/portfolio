@@ -180,7 +180,7 @@ const ProjectsSection = () => {
                                         </div>
                                         <div className="p-6 flex flex-col h-64">
                                             <div className="flex flex-wrap gap-2 mb-4">
-                                                {project.tags.map((tag, index) => (
+                                                {project.tags.slice(0, 10).map((tag, index) => (
                                                     <span
                                                         key={index}
                                                         className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground"
@@ -188,12 +188,16 @@ const ProjectsSection = () => {
                                                         {tag}
                                                     </span>
                                                 ))}
-                                                {project.tags.length > 3 && (
-                                                    <span className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground">
-                                                        +{project.tags.length - 3}
+                                                {project.tags.length > 10 && (
+                                                    <span
+                                                        title={project.tags.slice(10).join(', ')}
+                                                        className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground cursor-help"
+                                                    >
+                                                        +{project.tags.length - 10}
                                                     </span>
                                                 )}
                                             </div>
+
                                             <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                                             <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
                                             <div className="mt-auto pt-2 border-t">

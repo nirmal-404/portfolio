@@ -26,7 +26,7 @@ const ThemeToggle = () => {
             setIsDarkMode(true)
         }
     }
-    const [isDarkMode, setIsDarkMode] = React.useState(false)
+    const [isDarkMode, setIsDarkMode] = React.useState(true)
     return (
         <button
             onClick={toggleTheme}
