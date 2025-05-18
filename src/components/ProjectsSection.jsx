@@ -9,7 +9,7 @@ const projects = [
         title: "AI-Powered Canvas",
         description: "An AI-powered canvas capable of solving equations, recognizing drawings. - powered by Gemini API.",
         image: "/projects/ai-canvas.png",
-        tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini"],
+        tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
         ]
@@ -21,7 +21,7 @@ const projects = [
         title: "MERN Stack E-Commerce Platform",
         description: "An e-commerce platform built with the MERN stack. Integrations with payment gateways and email services.",
         image: "/projects/mern-ecommerce.png",
-        tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind", "ShadCN UI"],
+        tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind", "ShadCN UI", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
         ]
@@ -33,7 +33,7 @@ const projects = [
         title: "Java MVC E-Commerce System",
         description: "An e-commerce application built using Java Servlets, JSP, and the MVC architecture and styled with Tailwind CSS",
         image: "/projects/jsp-ecommerce.png",
-        tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind"],
+        tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/oop-group-project" },
         ]
@@ -45,7 +45,7 @@ const projects = [
         title: "PyQt5 GUI Projects",
         description: "A collection of simple desktop apps built with PyQt5, including a weather app, stopwatch, and digital clock.",
         image: "/projects/pyqt5-gui-projects.jpg",
-        tags: ["Python", "PyQt5"],
+        tags: ["Python", "PyQt5", "OpenWeatherMap"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/python" },
         ]
@@ -56,7 +56,7 @@ const projects = [
         title: "Microservices REST API",
         description: "A modular REST API built using a microservices architecture *Redis caching *rate limiting *RabbitMQ.",
         image: "/projects/nodejs-microservices-backend.png",
-        tags: ["Node.js", "Express", "Redis", "Docker", "RabbitMQ", "Cloudinary"],
+        tags: ["Node.js", "Express", "Redis", "Docker", "RabbitMQ", "Cloudinary", "Backend"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/node-concepts-IN/tree/main/social-media-microservice" }
         ]
@@ -66,7 +66,7 @@ const projects = [
         title: "Postgres REST API",
         description: "A REST API using PostgreSQL and Prisma ORM - Graphana",
         image: "/projects/docker-prisma-prometheus-graphan.png",
-        tags: ["PostgreSQL", "Prisma", "Prometheus", "Grafana", "Docker"],
+        tags: ["PostgreSQL", "Prisma", "Prometheus", "Grafana", "Docker", "Backend"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/node-concepts-ad/tree/main/postgres/postgress-with-prisma" }
         ]
