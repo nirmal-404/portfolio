@@ -3,81 +3,179 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github } from 'luc
 
 const projects = [
 
-    // Upcoming
+    // 15. Upcoming
     {
-        id: 6,
+        id: 15,
         title: "Upcoming",
         description: "",
-        image: "/projects/upcomming-springboot.png",
+        image: "/projects/15_upcomming-springboot.png",
         tags: ["Microservices", "Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL", "React", "AI", "Gemini"],
         urls: [
             { type: "github", href: "#" },
         ]
     },
-    // AI-Powered Canvas
+    // 14. AI-Powered Canvas
     {
-        id: 6,
+        id: 14,
         title: "AI-Powered Canvas",
         description: "An AI-powered canvas capable of solving equations, recognizing drawings. - powered by Gemini API.",
-        image: "/projects/ai-canvas.png",
+        image: "/projects/14_ai-canvas.png",
         tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
         urls: [
-            { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
+            { type: "github", href: "14_https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
         ]
     },
-    // MERN Stack E-Commerce Platform
+    // 13. MERN Stack E-Commerce Platform
     {
-        id: 5,
+        id: 13,
         title: "MERN Stack E-Commerce Platform",
         description: "An e-commerce platform built with the MERN stack. Integrations with payment gateways and email services.",
-        image: "/projects/mern-ecommerce.png",
+        image: "/projects/13_mern-ecommerce.png",
         tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind", "ShadCN UI", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
         ]
     },
-    // microservices restapi - social media microservice
+    // 12. microservices restapi - social media microservice
     {
-        id: 4,
+        id: 12,
         title: "Microservices REST API",
         description: "A modular REST API built using a microservices architecture *Redis caching *rate limiting *RabbitMQ.",
-        image: "/projects/nodejs-microservices-backend.png",
+        image: "/projects/12_nodejs-microservices-backend.png",
         tags: ["Node.js", "Express", "Redis", "Docker", "RabbitMQ", "Cloudinary", "Backend"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/node-concepts-IN/tree/main/social-media-microservice" }
         ]
     },
-    // postgres restapi
+    // 11. postgres restapi
     {
-        id: 3,
+        id: 11,
         title: "Postgres REST API",
         description: "A REST API using PostgreSQL and Prisma ORM - Graphana",
-        image: "/projects/docker-prisma-prometheus-graphan.png",
+        image: "/projects/11_docker-prisma-prometheus-graphan.png",
         tags: ["PostgreSQL", "Prisma", "Prometheus", "Grafana", "Docker", "Backend"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/node-concepts-ad/tree/main/postgres/postgress-with-prisma" }
         ]
     },
-    // PyQt5 GUI Projects
+
+    // 10. PyQt5 GUI Projects
     {
-        id: 2,
+        id: 10,
         title: "PyQt5 GUI Projects",
         description: "A collection of simple desktop apps built with PyQt5, including a weather app, stopwatch, and digital clock.",
-        image: "/projects/pyqt5-gui-projects.jpg",
+        image: "/projects/10_pyqt5-gui-projects.jpg",
         tags: ["Python", "PyQt5", "OpenWeatherMap"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/python" },
         ]
     },
-    // Java MVC E-Commerce System
+    // 9. Java MVC E-Commerce System
     {
-        id: 1,
+        id: 9,
         title: "Java MVC E-Commerce System",
         description: "An e-commerce application built using Java Servlets, JSP, and the MVC architecture and styled with Tailwind CSS",
-        image: "/projects/jsp-ecommerce.png",
+        image: "/projects/09_jsp-ecommerce.png",
         tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/oop-group-project" },
+        ]
+    },
+    // 8. TLoU-(-2.0)
+    {
+        id: 8,
+        title: "Zombie Shooter game",
+        description: "A 2D shooter game built with HTML, CSS, and JS, inspired after playing The Last of Us Part 1.",
+        image: "/projects/08_tlou-(-2.0).png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/TLOU---2.0" },
+            { type: "external", href: "" },
+        ]
+    },
+    // 7. Statistic Calcuator
+    {
+        id: 7,
+        title: "Statistic Calculator",
+        description: "A program that callulates and finds the mean, median, mode, range and the variance",
+        image: "/projects/07_statistical-calculator.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/statistical-calculator" },
+            { type: "external", href: "https://statistical-calculator.vercel.app/" },
+        ]
+    },
+    // 6. Music player
+    {
+        id: 6,
+        title: "Music Player",
+        description: "A simple music player with functions play, pause, skip, shuffle, and delete songs from a playlist",
+        image: "/projects/06_music-player.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/music-player" },
+            { type: "external", href: "https://music-player-khaki-two.vercel.app" },
+        ]
+    },
+
+    // 5. Number sorter
+    {
+        id: 5,
+        title: "Number sorter",
+        description: "A number sorting porgam build using html css and js",
+        image: "/projects/05_number-sorter.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/number-sorting" },
+            { type: "external", href: "https://number-sorting-xi.vercel.app" },
+        ]
+    },
+    // 4. Tik-Tac-Toe
+    {
+        id: 4,
+        title: "Tik-Tac-Toe",
+        description: "Tic Tac Toe game build using html css and js that can be played against the computer",
+        image: "/projects/04_tik-tac-toe.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/tic-tac-toe" },
+            { type: "external", href: "https://tic-tac-toe-nine-psi-14.vercel.app/" },
+        ]
+    },
+    // 3. Rock paper Scissor
+    {
+        id: 3,
+        title: "Rock Paper Scissor",
+        description: "A Rock paper scissor game that can be payed against computer",
+        image: "/projects/03_rock-paper-scissor.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/rock-paper-scissor" },
+            { type: "external", href: "https://rock-paper-scissor-smoky-delta.vercel.app" },
+        ]
+    },
+    // 2. Roman number Converter - have not pushed to github
+    {
+        id: 2,
+        title: "Roman Number Converter",
+        description: "A simpe roman conveter built usiing html css and js",
+        image: "/projects/02_roman-number-converter.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/decimal-to-roman-number-converter" },
+            { type: "external", href: "https://decimal-to-roman-number-converter.vercel.app/" },
+        ]
+    },
+    // 1. Decimal to Binary Converter
+    {
+        id: 1,
+        title: "Decimal to Binary Converter",
+        description: "A decimal to binary conveter with animations of showing the call stack",
+        image: "/projects/01_dec-to-bin-coverter.gif",
+        tags: ["HTML", "CSS", "JavaScript"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/Decimal-to-bincry-converter",},
+            { type: "external", href: "https://decimal-to-bincry-converter.vercel.app" }
         ]
     },
 ]
@@ -233,6 +331,7 @@ const ProjectsSection = () => {
                                                             ) : null}
                                                         </a>
                                                     ))}
+
                                                 </div>
 
                                             </div>
