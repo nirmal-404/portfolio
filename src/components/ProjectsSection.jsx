@@ -11,7 +11,7 @@ const projects = [
         image: "/projects/15_upcomming-springboot.png",
         tags: ["Microservices", "Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL", "React", "AI", "Gemini"],
         urls: [
-            { type: "github", href: "#" },
+            { type: "github", href: "https://github.com/nirmal-404/springboot-microservices.git" },
         ]
     },
     // 14. AI-Powered Canvas
