@@ -22,7 +22,7 @@ const projects = [
         image: "/projects/14_ai-canvas.png",
         tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
         urls: [
-            { type: "github", href: "14_https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
+            { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
         ]
     },
     // 13. MERN Stack E-Commerce Platform
