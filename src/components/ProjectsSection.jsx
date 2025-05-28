@@ -6,10 +6,10 @@ const projects = [
     // 15. Upcoming
     {
         id: 15,
-        title: "Upcoming",
-        description: "",
-        image: "/projects/15_upcomming-springboot.png",
-        tags: ["Microservices", "Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL", "React", "AI", "Gemini"],
+        title: "FitTrack",
+        description: "Logged fitness data with PostgreSQL & MongoDB. Used Gemini AI for smart tips and recommendations.",
+        image: "/projects/15_fit-tack.png",
+        tags: ["Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL + Mongo DB", "Gemini"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/springboot-microservices.git" },
         ]
@@ -24,7 +24,7 @@ const projects = [
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
             { type: "external", href: "https://ai-powered-handwriting-processor-8sljv2apd.vercel.app" },
-            
+
         ]
     },
     // 13. MERN Stack E-Commerce Platform
@@ -176,7 +176,7 @@ const projects = [
         image: "/projects/01_dec-to-bin-coverter.gif",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
-            { type: "github", href: "https://github.com/nirmal-404/Decimal-to-bincry-converter",},
+            { type: "github", href: "https://github.com/nirmal-404/Decimal-to-bincry-converter", },
             { type: "external", href: "https://decimal-to-bincry-converter.vercel.app" }
         ]
     },
