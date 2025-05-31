@@ -23,7 +23,7 @@ const projects = [
         tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
-            { type: "external", href: "https://ai-powered-handwriting-processor-8sljv2apd.vercel.app" },
+            { type: "external", href: "https://ai-powered-handwriting-processor.vercel.app" },
 
         ]
     },
