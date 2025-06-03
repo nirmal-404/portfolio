@@ -9,6 +9,7 @@ const skillsByCategory = {
     { name: "C", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" },
     { name: "C++", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" },
     { name: "Java", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" },
+    { name: "Python", icon: "https://www.vectorlogo.zone/logos/python/python-icon.svg" },
     { name: "Kotlin", icon: "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" },
     { name: "PHP", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" }
   ],
@@ -19,6 +20,8 @@ const skillsByCategory = {
     { name: "Tailwind", icon: "https://www.svgrepo.com/show/374118/tailwind.svg" },
     { name: "React", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" },
     { name: "Redux", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" },
+    { name: "Clerk", icon: "https://clerk.com/v2/favicon.ico" },
+    { name: "Expo", icon: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21~bgwhite.svg" },
     // { name: "Next.js", icon: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" }
   ],
   backend: [
@@ -29,7 +32,9 @@ const skillsByCategory = {
     { name: "Bun", icon: "https://www.vectorlogo.zone/logos/bunsh/bunsh-icon.svg" },
     { name: "Hono", icon: "https://upload.wikimedia.org/wikipedia/commons/6/60/Hono-logo.svg" },
     { name: "GraphQL", icon: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" },
-    { name: "Socket.IO", icon: "https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg" }
+    { name: "Socket.IO", icon: "https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg" },
+    { name: "RabbitMQ", icon: "https://www.svgrepo.com/show/303576/rabbitmq-logo.svg" },
+    { name: "Upstash", icon: "https://upstash.com/icons/apple-touch-icon.png" },
   ],
   database: [
     { name: "MongoDB", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" },
@@ -38,17 +43,20 @@ const skillsByCategory = {
     { name: "SQL Server", icon: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" },
     { name: "MariaDB", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP2TPZEoU_WaztHovZN7mFiZRk5Zfd1ZfP1hYqwFDDVw&s" },
     { name: "SQLite", icon: "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" },
+    { name: "GraphQL", icon: "https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg" },
     { name: "Redis", icon: "https://www.vectorlogo.zone/logos/redis/redis-official.svg" },
-    { name: "Prisma", icon: "https://www.svgrepo.com/show/373776/light-prisma.svg" }
+    { name: "Prisma", icon: "https://www.svgrepo.com/show/373776/light-prisma.svg" },
+    { name: "Neon", icon: "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/neon-icon.svg" },
   ],
   devops: [
     { name: "Docker", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" },
     { name: "GitHub Actions", icon: "https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg" },
     // { name: "Azure", icon: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" },
     { name: "Vercel", icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" },
+    { name: "Railway", icon: "https://railway.com/favicon-96x96.png" },
     // { name: "Jenkins", icon: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" },
     { name: "Prometheus", icon: "https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg" },
-    { name: "Grafana", icon: "https://www.svgrepo.com/show/353829/grafana.svg" }
+    { name: "Grafana", icon: "https://www.svgrepo.com/show/353829/grafana.svg" },
   ],
   tools: [
     { name: "Git", icon: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" },
@@ -57,7 +65,7 @@ const skillsByCategory = {
     { name: "Figma", icon: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
     { name: "Linux", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" },
     { name: "Jira", icon: "https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg" },
-    { name: "Trello", icon: "https://cdn.worldvectorlogo.com/logos/jira-1.svg" }
+    { name: "Trello", icon: "https://cdn.worldvectorlogo.com/logos/jira-1.svg" },
   ]
 };
 
@@ -69,7 +77,7 @@ const categories = [
   { id: "backend", name: "Backend" },
   { id: "database", name: "Databases" },
   { id: "devops", name: "DevOps" },
-  { id: "tools", name: "Tools" }
+  { id: "tools", name: "Tools" },
 ];
 
 const SkillsSection = () => {
