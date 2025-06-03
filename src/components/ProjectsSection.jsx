@@ -3,7 +3,18 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github } from 'luc
 
 const projects = [
 
-    // 15. Upcoming
+    // 16_finace-traceker.png
+    {
+        id: 16,
+        title: "Finance Tracker",
+        description: "Cross-platform app to manage personal finances.",
+        image: "/projects/16_finance-tracker.png",
+        tags: ["React Native", "Expo", "Node.js", "Upstash", "Clerk", "PostgreSQL", "Railway"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/Finance-Tracker-React-Native" },
+        ]
+    },
+    // 15. Fitness microservices
     {
         id: 15,
         title: "FitTrack",
@@ -11,7 +22,7 @@ const projects = [
         image: "/projects/15_fit-tack.png",
         tags: ["Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL + Mongo DB", "Gemini"],
         urls: [
-            { type: "github", href: "https://github.com/nirmal-404/springboot-microservices.git" },
+            { type: "github", href: "https://github.com/nirmal-404/springboot-microservices" },
         ]
     },
     // 14. AI-Powered Canvas
