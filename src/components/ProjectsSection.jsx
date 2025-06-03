@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react'
+import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download } from 'lucide-react'
 
 const projects = [
 
@@ -12,6 +12,7 @@ const projects = [
         tags: ["React Native", "Expo", "Node.js", "Upstash", "Clerk", "PostgreSQL", "Railway"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/Finance-Tracker-React-Native" },
+            { type: "resource", href: "https://expo.dev/accounts/nirmalperera/projects/mobile/builds/7c9baa78-a09e-4e8e-b674-a1d77018c855" },
         ]
     },
     // 15. Fitness microservices
@@ -341,7 +342,12 @@ const ProjectsSection = () => {
                                                                     <ExternalLink className="w-5 h-5" />
                                                                     <span className="text-sm">See demo</span>
                                                                 </>
-                                                            ) : null}
+                                                            ) :  url.type === "resource" ? (
+                                                                <>
+                                                                    <Download className="w-5 h-5" />
+                                                                    <span className="text-sm">Download</span>
+                                                                </>
+                                                            ) :null}
                                                         </a>
                                                     ))}
 
