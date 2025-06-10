@@ -22,7 +22,7 @@ const skillsByCategory = {
     { name: "Redux", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" },
     { name: "Clerk", icon: "https://clerk.com/v2/favicon.ico" },
     { name: "Expo", icon: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21~bgwhite.svg" },
-    // { name: "Next.js", icon: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" }
+    { name: "Next.js", icon: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" }
   ],
   backend: [
     { name: "Node.js", icon: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" },
