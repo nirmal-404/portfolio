@@ -11,7 +11,7 @@ const projects = [
         image : "/projects/18_upcoming.png",
         tags : ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React", ],
         urls: [
-            {type : "github", href : "https://github.com/nirmal-404/nestjs-blog"}
+            {type : "github", href : "https://github.com/nirmal-404/asset-manger"}
         ]
     },
     // 17. next js blog
