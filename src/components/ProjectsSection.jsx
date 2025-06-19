@@ -3,7 +3,18 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download }
 
 const projects = [
 
-    // 16_finace-traceker.png
+    // 17. next js blog
+    {
+        id: 17,
+        title: "Blog Application",
+        description: "A blog where users can create blogs, update and delete their blogs and view / read all blogs.",
+        image : "/projects/17_nextjs-blog.png",
+        tags : ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React", ],
+        urls: [
+            {type : "github", href : "https://github.com/nirmal-404/nestjs-blog"}
+        ]
+    },
+    // 16. finace-traceker
     {
         id: 16,
         title: "Finance Tracker",
@@ -72,7 +83,6 @@ const projects = [
             { type: "github", href: "https://github.com/nirmal-404/node-concepts-ad/tree/main/postgres/postgress-with-prisma" }
         ]
     },
-
     // 10. PyQt5 GUI Projects
     {
         id: 10,
@@ -131,7 +141,6 @@ const projects = [
             { type: "external", href: "https://music-player-khaki-two.vercel.app" },
         ]
     },
-
     // 5. Number sorter
     {
         id: 5,
