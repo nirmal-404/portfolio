@@ -5,6 +5,17 @@ const projects = [
 
     // 17. next js blog
     {
+        id: 18,
+        title: "Asset Managemt System",
+        description: "upcoming",
+        image : "/projects/18_upcoming.png",
+        tags : ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React", ],
+        urls: [
+            {type : "github", href : "https://github.com/nirmal-404/nestjs-blog"}
+        ]
+    },
+    // 17. next js blog
+    {
         id: 17,
         title: "Blog Application",
         description: "A blog where users can create blogs, update and delete their blogs and view / read all blogs.",
