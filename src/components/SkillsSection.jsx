@@ -35,6 +35,8 @@ const skillsByCategory = {
     { name: "Socket.IO", icon: "https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg" },
     { name: "RabbitMQ", icon: "https://www.svgrepo.com/show/303576/rabbitmq-logo.svg" },
     { name: "Upstash", icon: "https://upstash.com/icons/apple-touch-icon.png" },
+    { name: "Drizzle", icon: "https://orm.drizzle.team/favicon.ico" },
+    { name: "Better Auth", icon: "https://www.better-auth.com/favicon/favicon.ico" },
   ],
   database: [
     { name: "MongoDB", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" },
@@ -43,7 +45,6 @@ const skillsByCategory = {
     { name: "SQL Server", icon: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" },
     { name: "MariaDB", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP2TPZEoU_WaztHovZN7mFiZRk5Zfd1ZfP1hYqwFDDVw&s" },
     { name: "SQLite", icon: "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" },
-    { name: "GraphQL", icon: "https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg" },
     { name: "Redis", icon: "https://www.vectorlogo.zone/logos/redis/redis-official.svg" },
     { name: "Prisma", icon: "https://www.svgrepo.com/show/373776/light-prisma.svg" },
     { name: "Neon", icon: "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/neon-icon.svg" },
