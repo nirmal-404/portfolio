@@ -5,6 +5,17 @@ const projects = [
 
     // 18. asset management
     {
+        id: 19,
+        title: "Upcoming",
+        description: "Currently the project is in planning stage",
+        image : "/projects/upcoming.png",
+        tags : ["Java", "SpringBoot", "Microservices", "Kafka", "Postgre", "gRPC"],
+        urls: [
+            // {type : "github", href : "https://github.com/nirmal-404/"}
+        ]
+    },
+    // 18. asset management
+    {
         id: 18,
         title: "Asset Managemt System",
         description: "A system where users add assets, admins approve them, and users can purchase.",
