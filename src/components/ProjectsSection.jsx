@@ -3,13 +3,13 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download }
 
 const projects = [
 
-    // 17. next js blog
+    // 18. asset management
     {
         id: 18,
         title: "Asset Managemt System",
-        description: "upcoming",
-        image : "/projects/18_upcoming.png",
-        tags : ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React", ],
+        description: "A system where users add assets, admins approve them, and users can purchase.",
+        image : "/projects/18_asset-management.png",
+        tags : ["Next JS", "Postgres", "Cloudinary", "Drizzle", "ShadCN UI", "Better Auth", "React", "Paypal" ],
         urls: [
             {type : "github", href : "https://github.com/nirmal-404/asset-manger"}
         ]
