@@ -34,6 +34,7 @@ const skillsByCategory = {
     { name: "GraphQL", icon: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" },
     { name: "Socket.IO", icon: "https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg" },
     { name: "RabbitMQ", icon: "https://www.svgrepo.com/show/303576/rabbitmq-logo.svg" },
+    { name: "Kafka", icon: "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-ar21~bgwhite.svg" },
     { name: "Upstash", icon: "https://upstash.com/icons/apple-touch-icon.png" },
     { name: "Drizzle", icon: "https://orm.drizzle.team/favicon.ico" },
     { name: "Better Auth", icon: "https://www.better-auth.com/favicon/favicon.ico" },
