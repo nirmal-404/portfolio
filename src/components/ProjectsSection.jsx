@@ -3,15 +3,15 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download }
 
 const projects = [
 
-    // 18. asset management
+    // 19. Patient managemt System
     {
         id: 19,
-        title: "Upcoming",
-        description: "Currently the project is in planning stage",
+        title: "Patient managemt System",
+        description: "Microservices based rest api using Springboot",
         image : "/projects/upcoming.png",
-        tags : ["Java", "SpringBoot", "Microservices", "Kafka", "Postgre", "gRPC"],
+        tags : ["Java", "SpringBoot", "Microservices", "Kafka", "Postgre", "gRPC", "Protobuf"],
         urls: [
-            // {type : "github", href : "https://github.com/nirmal-404/"}
+            {type : "github", href : "https://github.com/nirmal-404/springboot-patient-managemnt-system"}
         ]
     },
     // 18. asset management
@@ -33,7 +33,7 @@ const projects = [
         image : "/projects/17_nextjs-blog.png",
         tags : ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React", ],
         urls: [
-            {type : "github", href : "https://github.com/nirmal-404/nestjs-blog"}
+            {type : "github", href : "https://github.com/nirmal-404/nextjs-blog"}
         ]
     },
     // 16. finace-traceker
