@@ -3,15 +3,26 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download }
 
 const projects = [
 
+    // 20. Patient managemt System
+    {
+        id: 20,
+        title: "Restaurant POS Desktop App",
+        description: "Offline POS desktop app using .NET MAUI, XAML, and SQLite for Windows/macOS.",
+        image: "/projects/upcomming.png",
+        tags: [".NET MAUI", "XAML", "SQLite", "C#", "Desktop App", "Cross-Platform",],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/Resturant-POS-.NET" }
+        ]
+    },
     // 19. Patient managemt System
     {
         id: 19,
         title: "Patient managemt System",
         description: "Microservices based rest api using Springboot",
-        image : "/projects/upcoming.png",
-        tags : ["Java", "SpringBoot", "Microservices", "Kafka", "Postgre", "gRPC", "Protobuf"],
+        image: "/projects/19_patient-management.png",
+        tags: ["Java", "SpringBoot", "Microservices", "Kafka", "Postgre", "gRPC", "Protobuf", "LocalStack"],
         urls: [
-            {type : "github", href : "https://github.com/nirmal-404/springboot-patient-managemnt-system"}
+            { type: "github", href: "https://github.com/nirmal-404/springboot-patient-managemnt-system" }
         ]
     },
     // 18. asset management
@@ -19,10 +30,10 @@ const projects = [
         id: 18,
         title: "Asset Managemt System",
         description: "A system where users add assets, admins approve them, and users can purchase.",
-        image : "/projects/18_asset-management.png",
-        tags : ["Next JS", "Postgres", "Cloudinary", "Drizzle", "ShadCN UI", "Better Auth", "React", "Paypal" ],
+        image: "/projects/18_asset-management.png",
+        tags: ["Next JS", "Postgres", "Cloudinary", "Drizzle", "ShadCN UI", "Better Auth", "React", "Paypal"],
         urls: [
-            {type : "github", href : "https://github.com/nirmal-404/asset-manger"}
+            { type: "github", href: "https://github.com/nirmal-404/asset-manger" }
         ]
     },
     // 17. next js blog
@@ -30,10 +41,10 @@ const projects = [
         id: 17,
         title: "Blog Application",
         description: "A blog where users can create blogs, update and delete their blogs and view / read all blogs.",
-        image : "/projects/17_nextjs-blog.png",
-        tags : ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React", ],
+        image: "/projects/17_nextjs-blog.png",
+        tags: ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React",],
         urls: [
-            {type : "github", href : "https://github.com/nirmal-404/nextjs-blog"}
+            { type: "github", href: "https://github.com/nirmal-404/nextjs-blog" }
         ]
     },
     // 16. finace-traceker
@@ -373,12 +384,12 @@ const ProjectsSection = () => {
                                                                     <ExternalLink className="w-5 h-5" />
                                                                     <span className="text-sm">See demo</span>
                                                                 </>
-                                                            ) :  url.type === "resource" ? (
+                                                            ) : url.type === "resource" ? (
                                                                 <>
                                                                     <Download className="w-5 h-5" />
                                                                     <span className="text-sm">Download</span>
                                                                 </>
-                                                            ) :null}
+                                                            ) : null}
                                                         </a>
                                                     ))}
 
