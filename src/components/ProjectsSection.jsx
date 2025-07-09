@@ -8,7 +8,7 @@ const projects = [
         id: 20,
         title: "Restaurant POS Desktop App",
         description: "Offline POS desktop app using .NET MAUI, XAML, and SQLite for Windows/macOS.",
-        image: "/projects/upcomming.png",
+        image: "/projects/20_restarent-pos.png",
         tags: [".NET MAUI", "XAML", "SQLite", "C#", "Desktop App", "Cross-Platform",],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/Resturant-POS-.NET" }
