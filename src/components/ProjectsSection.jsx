@@ -147,7 +147,7 @@ const projects = [
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/TLOU---2.0" },
-            { type: "external", href: "" },
+            { type: "external", href: "https://tlou-2-0.vercel.app" },
         ]
     },
     // 7. Statistic Calcuator
