@@ -20,6 +20,7 @@ const skillsByCategory = {
     { name: "Bootstrap", icon: "https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" },
     { name: "Tailwind", icon: "https://www.svgrepo.com/show/374118/tailwind.svg" },
     { name: "React", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" },
+    {name : "Angular", icon : "https://angular.io/assets/images/logos/angular/angular.svg" },
     { name: "Redux", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" },
     { name: "Clerk", icon: "https://clerk.com/v2/favicon.ico" },
     { name: "Expo", icon: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21~bgwhite.svg" },
