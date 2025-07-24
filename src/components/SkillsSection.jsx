@@ -41,6 +41,7 @@ const skillsByCategory = {
     { name: "Upstash", icon: "https://upstash.com/icons/apple-touch-icon.png" },
     { name: "Drizzle", icon: "https://orm.drizzle.team/favicon.ico" },
     { name: "Better Auth", icon: "https://www.better-auth.com/favicon/favicon.ico" },
+    { name: "Appwrite", icon: "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" },
   ],
   database: [
     { name: "MongoDB", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" },
@@ -63,6 +64,7 @@ const skillsByCategory = {
     // { name: "Jenkins", icon: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" },
     { name: "Prometheus", icon: "https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg" },
     { name: "Grafana", icon: "https://www.svgrepo.com/show/353829/grafana.svg" },
+    { name: "Sentry", icon: "https://www.vectorlogo.zone/logos/sentryio/sentryio-ar21~bgwhite.svg" },
   ],
   tools: [
     { name: "Git", icon: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" },
