@@ -3,6 +3,17 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download }
 
 const projects = [
 
+    // 21. Feastr - React native
+    {
+        id: 21,
+        title: "Feastr - Mobile App",
+        description: "A cross platform mobile aplication built using react native",
+        image: "/projects/21_feastr.jpg",
+        tags: ["React Native", "Appwrite", "Sentry", "Zustand", "Mobile App", "Cross-Platform",],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/Feastr" }
+        ]
+    },
     // 20. Patient managemt System
     {
         id: 20,
