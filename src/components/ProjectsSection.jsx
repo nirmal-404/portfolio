@@ -9,7 +9,7 @@ const projects = [
         title: "Feastr - Mobile App",
         description: "A cross platform mobile aplication built using react native",
         image: "/projects/21_feastr.jpg",
-        tags: ["React Native", "Appwrite", "Sentry", "Zustand", "Mobile App", "Cross-Platform",],
+        tags: ["React Native", "Appwrite", "Sentry", "Zustand", "Native Wind", "Expo", "Mobile App",],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/Feastr" }
         ]
