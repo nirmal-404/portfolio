@@ -26,7 +26,9 @@ const skillsByCategory = {
     { name: "Zustand", icon: "https://zustand-demo.pmnd.rs/favicon.ico" },
     { name: "Clerk", icon: "https://clerk.com/v2/favicon.ico" },
     { name: "Expo", icon: "https://www.vectorlogo.zone/logos/expoio/expoio-ar21~bgwhite.svg" },
-    { name: "Next.js", icon: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" }
+    { name: "Next.js", icon: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" },
+    { name: "ShadCnUI", icon: "https://ui.shadcn.com/favicon.ico" },
+    { name: "daisyUI", icon: "https://img.daisyui.com/images/daisyui/daisyui-logo-192.png" },
   ],
   backend: [
     { name: "Node.js", icon: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" },
