@@ -3,6 +3,18 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download }
 
 const projects = [
 
+    // 22. ChatApp - React native
+    {
+        id: 22,
+        title: "ChatApp",
+        description: "A real-time chat app with secure user-to-user messaging using Socket.IO and MongoDB.",
+        image: "/projects/22_chat-app.png",
+        tags: ["React", "DaisyUI", "Tailwind", "Zustand", "Socket.IO", "Node.js", "JWT", "MongoDB"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/ChatApp" } // Replace with correct link if different
+        ]
+    },
+
     // 21. Feastr - React native
     {
         id: 21,
