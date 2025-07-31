@@ -64,6 +64,7 @@ const skillsByCategory = {
     // { name: "Azure", icon: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" },
     { name: "Vercel", icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" },
     { name: "Railway", icon: "https://railway.com/favicon-96x96.png" },
+    { name: "Netify", icon: "https://app.netlify.com/favicon-48x48.png" },
     { name: "LocalStack", icon: "https://cdn.prod.website-files.com/6539036f80ddc9e9a467134e/65546e419e7e9b3f9cf3408c_favicon.png" },
     // { name: "Jenkins", icon: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" },
     { name: "Prometheus", icon: "https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg" },
