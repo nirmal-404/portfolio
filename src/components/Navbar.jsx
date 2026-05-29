@@ -7,6 +7,7 @@ const navItems = [
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Contact", href: "#contact" },
 ]
 const Navbar = () => {
@@ -21,10 +22,10 @@ const Navbar = () => {
 
         window.addEventListener("scroll", handleScroll)
         handleScroll() // Check initial scroll position
-        
+
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
-    
+
     return (
         <header>
             {/* Fixed navbar */}
@@ -55,15 +56,15 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile nav toggle */}
-                    <button className='md:hidden p-2 text-foreground z-50' 
-                    onClick={() => setIsMenuOpen((prev) => !prev)}
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    > 
+                    <button className='md:hidden p-2 text-foreground z-50'
+                        onClick={() => setIsMenuOpen((prev) => !prev)}
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    >
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
             </nav>
-            
+
             {/* Mobile menu overlay - completely separate from navbar */}
             <div
                 className={cn(
