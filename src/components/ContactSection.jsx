@@ -6,52 +6,52 @@ import { useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
-
+    console.log("env", process.env.EMAILJS_SERVICE_ID);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const { toast } = useToast();
 
     const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+        e.preventDefault();
+        setIsSubmitting(true);
 
-    const form = e.target;
-    const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value,
+        const form = e.target;
+        const data = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+        };
+
+        const serviceID = 'service_xp3wldk';
+        const toYouTemplateID = 'template_xfgqalb'; // This one sends the user's message to YOU
+        const autoReplyTemplateID = 'template_ofqjr05'; // This is the auto-reply to the user
+        const publicKey = 'lxhqJYg0WO06T4YRb';
+
+        // First, send message to YOU
+        emailjs
+            .send(serviceID, toYouTemplateID, data, publicKey)
+            .then(() => {
+                // Then, send auto-reply to USER
+                return emailjs.send(serviceID, autoReplyTemplateID, data, publicKey);
+            })
+            .then(() => {
+                toast({
+                    title: "Message sent!",
+                    description: "Thanks for your message. I'll respond asap.",
+                });
+                form.reset();
+            })
+            .catch((err) => {
+                toast({
+                    title: "Error",
+                    description: "Failed to send message. Try again later.",
+                    variant: "destructive",
+                });
+                console.error(err);
+            })
+            .finally(() => {
+                setIsSubmitting(false);
+            });
     };
-
-    const serviceID = 'service_xp3wldk';
-    const toYouTemplateID = 'template_xfgqalb'; // This one sends the user's message to YOU
-    const autoReplyTemplateID = 'template_ofqjr05'; // This is the auto-reply to the user
-    const publicKey = 'lxhqJYg0WO06T4YRb';
-
-    // First, send message to YOU
-    emailjs
-        .send(serviceID, toYouTemplateID, data, publicKey)
-        .then(() => {
-            // Then, send auto-reply to USER
-            return emailjs.send(serviceID, autoReplyTemplateID, data, publicKey);
-        })
-        .then(() => {
-            toast({
-                title: "Message sent!",
-                description: "Thanks for your message. I'll respond asap.",
-            });
-            form.reset();
-        })
-        .catch((err) => {
-            toast({
-                title: "Error",
-                description: "Failed to send message. Try again later.",
-                variant: "destructive",
-            });
-            console.error(err);
-        })
-        .finally(() => {
-            setIsSubmitting(false);
-        });
-};
 
 
 

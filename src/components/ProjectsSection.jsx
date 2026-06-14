@@ -2,7 +2,27 @@ import React, { useState, useEffect } from 'react'
 import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download } from 'lucide-react'
 
 const projects = [
-
+    {
+        id: 24,
+        title: "HealthSenseAi",
+        description: "A hospital mangement system with AI symptom check",
+        image: "/projects/24_HealthSenseAI.png",
+        tags: ["React", "Microservices", "Langgraph", "Tailwind", "Firebase", "Node.js", "Docker", "K8s"],
+        urls: [
+            { type: "github", href: "https://github.com/nirmal-404/EcoShore-Frontend" },
+        ]
+    },
+    {
+        id: 23,
+        title: "Ecoshore",
+        description: "A waste mangement and beach cleanup event mangement system",
+        image: "/projects/23_Ecoshore.png",
+        tags: ["React", "ShadCn UI", "Tailwind", "Redux", "Firebase", "Node.js", "JWT", "MongoDB"],
+        urls: [
+            { module: "(FE)", type: "github", href: "https://github.com/nirmal-404/EcoShore-Frontend" },
+            { module: "(BE)", type: "github", href: "https://github.com/nirmal-404/EcoShore-Backend" }
+        ]
+    },
     // 22. ChatApp - React native
     {
         id: 22,
@@ -400,7 +420,7 @@ const ProjectsSection = () => {
                                                             {url.type === "github" ? (
                                                                 <>
                                                                     <Github className="w-5 h-5" />
-                                                                    <span className="text-sm">View Source</span>
+                                                                    <span className="text-sm">View Source {url.module ?? ''}</span>
                                                                 </>
                                                             ) : url.type === "external" ? (
                                                                 <>
