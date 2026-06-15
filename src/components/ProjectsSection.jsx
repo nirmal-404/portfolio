@@ -122,19 +122,19 @@ const projects = [
         tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
-            { type: "external", href: "https://ai-powered-handwriting-processor.vercel.app" },
+            // { type: "external", href: "https://ai-powered-handwriting-processor.vercel.app" },
 
         ]
     },
     // 13. MERN Stack E-Commerce Platform
     {
         id: 13,
-        title: "MERN Stack E-Commerce Platform",
+        title: "Rasaa Agro Products",
         description: "An e-commerce platform built with the MERN stack. Integrations with payment gateways and email services.",
         image: "/projects/13_mern-ecommerce.png",
         tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind", "ShadCN UI", "Full-Stack"],
         urls: [
-            { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
+            { type: "github", href: "https://github.com/nirmal-404/Rasaa-Spices" },
         ]
     },
     // 12. microservices restapi - social media microservice
