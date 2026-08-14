@@ -4,9 +4,10 @@ import { cn } from '@/lib/utils'
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { ENV_VARS } from '../config/envConfig';
 
 const ContactSection = () => {
-    console.log("env", process.env.EMAILJS_SERVICE_ID);
+
     const [isSubmitting, setIsSubmitting] = useState(false);
     const { toast } = useToast();
 
@@ -18,13 +19,14 @@ const ContactSection = () => {
         const data = {
             name: form.name.value,
             email: form.email.value,
+            phone: form.email.phone,
             message: form.message.value,
         };
 
-        const serviceID = 'service_xp3wldk';
-        const toYouTemplateID = 'template_xfgqalb'; // This one sends the user's message to YOU
-        const autoReplyTemplateID = 'template_ofqjr05'; // This is the auto-reply to the user
-        const publicKey = 'lxhqJYg0WO06T4YRb';
+        const serviceID = ENV_VARS.EMAILJS_SERVICE_ID;
+        const toYouTemplateID = ENV_VARS.EMAILJS_TO_YOU_TEMPLATE_ID; // This one sends the user's message to YOU
+        const autoReplyTemplateID = ENV_VARS.EMAILJS_AUTO_REPLY_TEMPLATE_ID; // This is the auto-reply to the user
+        const publicKey = ENV_VARS.EMAILJS_PUBLIC_KEY;
 
         // First, send message to YOU
         emailjs
@@ -122,10 +124,10 @@ const ContactSection = () => {
                             <h4 className='font-medium mb-4'>Connect with me</h4>
                             <div className="flex space-x-4 justify-center">
                                 <a href='https://web.facebook.com/manusha.perera.526/about' target='_blank'>
-                                    <Linkedin />
+                                    <Facebook />
                                 </a>
                                 <a href='https://www.linkedin.com/in/nirmal-perera-65446b252/' target='_blank'>
-                                    <Facebook />
+                                    <Linkedin />
                                 </a>
                             </div>
                         </div>
@@ -146,6 +148,11 @@ const ContactSection = () => {
                             <div>
                                 <label htmlFor="email" className='block text-sm font-medium mb-2'>Your email</label>
                                 <input type="email" id="email" name='email' required className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary' placeholder='jhondoe@gmail.com' />
+                            </div>
+
+                            <div>
+                                <label htmlFor="phone" className='block text-sm font-medium mb-2'>Your phone</label>
+                                <input type="phone" id="phone" name='phone' className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary' placeholder='+94 7X XXX XXXX' />
                             </div>
 
                             <div>
