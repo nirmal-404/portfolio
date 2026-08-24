@@ -203,13 +203,19 @@ const CertificationsSection = () => {
                                     <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col hover:-translate-y-1 border border-primary/10 hover:border-primary/30">
                                         {/* Certificate Image Hero */}
                                         <div
-                                            className="w-full h-52 overflow-hidden cursor-pointer relative group bg-gradient-to-br from-primary/10 to-secondary/10 border-b border-primary/20"
+                                            className="w-full aspect-[16/10] overflow-hidden cursor-pointer relative group bg-gradient-to-br from-primary/10 to-secondary/10 border-b border-primary/20"
                                             onClick={() => setSelectedCert(cert)}
                                         >
                                             <img
                                                 src={cert.preview}
+                                                alt=""
+                                                aria-hidden="true"
+                                                className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50"
+                                            />
+                                            <img
+                                                src={cert.preview}
                                                 alt={cert.title}
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                                             />
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
                                                 <div className="bg-primary/90 hover:bg-primary rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
@@ -318,7 +324,7 @@ const CertificationsSection = () => {
                     onClick={() => setSelectedCert(null)}
                 >
                     <div
-                        className="bg-card rounded-xl overflow-hidden shadow-2xl max-w-4xl w-full border border-primary/20"
+                        className="relative bg-card rounded-xl overflow-y-auto shadow-2xl max-w-4xl w-full max-h-[calc(100vh-2rem)] border border-primary/20"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close Button */}
