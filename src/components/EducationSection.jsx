@@ -1,10 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { ExternalLink } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const educationEntries = [
     {
-        period: '2023 – Present',
+        period: '2023 August – Present',
         institution: 'SLIIT',
         website: 'https://www.sliit.lk/',
         title: 'BSc (Hons) in Information Technology',
@@ -72,9 +73,10 @@ const EducationSection = () => {
                                                     href={entry.website}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="inline-block text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300"
+                                                    className="inline-flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300"
                                                 >
-                                                    {entry.institution}
+                                                    <span>{entry.institution}</span>
+                                                    <ExternalLink className="h-4 w-4 shrink-0" />
                                                 </a>
                                                 <p className="mt-2 text-base font-medium text-foreground/90">{entry.title}</p>
                                                 <p className="mt-2 text-sm text-muted-foreground">{entry.subtitle}</p>

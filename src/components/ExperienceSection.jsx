@@ -1,10 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { ExternalLink } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const experienceEntries = [
     {
-        period: '2024 – Present',
+        period: '2024 August – 2025 February (6 months)',
         company: 'Atlato Pty Ltd',
         website: 'https://www.atlato.com/',
         role: 'Intern Software Engineer',
@@ -71,9 +72,10 @@ const ExperienceSection = () => {
                                                     href={entry.website}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="inline-block text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300"
+                                                    className="inline-flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300"
                                                 >
-                                                    {entry.company}
+                                                    <span>{entry.company}</span>
+                                                    <ExternalLink className="h-4 w-4 shrink-0" />
                                                 </a>
                                                 <p className="mt-2 text-base font-medium text-foreground/90">{entry.role}</p>
 
