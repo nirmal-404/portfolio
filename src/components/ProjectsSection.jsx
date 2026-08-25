@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Download } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const projects = [
     {
@@ -376,7 +377,11 @@ const ProjectsSection = () => {
                                     key={project.id}
                                     className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
-                                    <div className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                                    <motion.div
+                                        whileHover={{ y: -8 }}
+                                        transition={{ type: "spring", stiffness: 280, damping: 20 }}
+                                        className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-[0_20px_45px_hsl(195_45%_3%_/_0.2)] transition-shadow duration-300 h-full"
+                                    >
                                         <div className="h-48 overflow-hidden">
                                             <img
                                                 src={project.image}
@@ -440,7 +445,7 @@ const ProjectsSection = () => {
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             ))}
                         </div>

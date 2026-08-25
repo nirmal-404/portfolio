@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Download, ExternalLink, Copy, Check, Maximize2 } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
+import { motion } from 'framer-motion'
 
 const certifications = [
     {
@@ -200,7 +201,11 @@ const CertificationsSection = () => {
                                     key={cert.id}
                                     className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
-                                    <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col hover:-translate-y-1 border border-primary/10 hover:border-primary/30">
+                                    <motion.div
+                                        whileHover={{ y: -8 }}
+                                        transition={{ type: "spring", stiffness: 280, damping: 20 }}
+                                        className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-[0_20px_45px_hsl(195_45%_3%_/_0.2)] transition-shadow duration-300 h-full flex flex-col border border-primary/10 hover:border-primary/30"
+                                    >
                                         {/* Certificate Image Hero */}
                                         <div
                                             className="w-full aspect-[16/10] overflow-hidden cursor-pointer relative group bg-gradient-to-br from-primary/10 to-secondary/10 border-b border-primary/20"
@@ -286,7 +291,7 @@ const CertificationsSection = () => {
                                                 Verify Certificate
                                             </a>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             ))}
                         </div>

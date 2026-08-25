@@ -2,6 +2,7 @@
 
 import { Briefcase, Code, User } from 'lucide-react'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const AboutSection = () => {
   return (
@@ -39,7 +40,7 @@ const AboutSection = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
+            <motion.div whileHover={{ y: -6 }} transition={{ type: "spring", stiffness: 280, damping: 20 }} className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
@@ -51,8 +52,8 @@ const AboutSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
+            </motion.div>
+            <motion.div whileHover={{ y: -6 }} transition={{ type: "spring", stiffness: 280, damping: 20 }} className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <User className="h-6 w-6 text-primary" />
@@ -64,8 +65,8 @@ const AboutSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
+            </motion.div>
+            <motion.div whileHover={{ y: -6 }} transition={{ type: "spring", stiffness: 280, damping: 20 }} className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />
@@ -77,7 +78,7 @@ const AboutSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

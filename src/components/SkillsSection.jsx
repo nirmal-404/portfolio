@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 
 // Define skill categories with their icons
 const skillsByCategory = {
@@ -21,7 +22,7 @@ const skillsByCategory = {
     { name: "Tailwind", icon: "https://www.svgrepo.com/show/374118/tailwind.svg" },
     { name: "Nativewind", icon: "https://www.svgrepo.com/show/473474/wind.svg" },
     { name: "React", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" },
-    {name : "Angular", icon : "https://angular.io/assets/images/logos/angular/angular.svg" },
+    { name: "Angular", icon: "https://angular.io/assets/images/logos/angular/angular.svg" },
     { name: "Redux", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" },
     { name: "Zustand", icon: "https://zustand-demo.pmnd.rs/favicon.ico" },
     { name: "Clerk", icon: "https://clerk.com/v2/favicon.ico" },
@@ -121,9 +122,11 @@ const SkillsSection = () => {
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {categories.map((category) => (
-            <button
+            <motion.button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
+              whileHover={{ y: -2, scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
               className={cn(
                 "px-3 py-1 rounded-full text-xs transition-colors duration-300",
                 activeCategory === category.id
@@ -132,26 +135,32 @@ const SkillsSection = () => {
               )}
             >
               {category.name}
-            </button>
+            </motion.button>
           ))}
         </div>
 
         {/* Skills Icons Grid */}
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 md:gap-6">
           {getVisibleSkills().map((skill, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex flex-col items-center justify-center p-3 rounded-lg bg-card hover:bg-card/80 transition-all duration-300 group"
+              whileHover={{ y: -8, rotateX: 5, rotateY: -5, scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 320, damping: 18 }}
+              className="group relative flex flex-col items-center justify-center overflow-hidden rounded-lg border border-border/60 bg-card/75 p-3 shadow-[0_10px_30px_hsl(195_45%_3%_/_0.1)] transition-colors duration-300 hover:border-primary/60 hover:bg-card"
             >
-              <div className="w-10 h-10 mb-2 flex items-center justify-center">
-                <img 
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <motion.div
+                whileHover={{ scale: 1.18, rotate: 5 }}
+                className="relative flex h-10 w-10 items-center justify-center"
+              >
+                <img
                   src={skill.icon}
                   alt={skill.name}
-                  className="max-h-full max-w-full object-contain" 
+                  className="max-h-full max-w-full object-contain"
                 />
-              </div>
-              <span className="text-xs text-center opacity-80 group-hover:opacity-100">{skill.name}</span>
-            </div>
+              </motion.div>
+              <span className="relative text-center text-xs opacity-80 transition-opacity group-hover:opacity-100">{skill.name}</span>
+            </motion.div>
           ))}
         </div>
       </div>

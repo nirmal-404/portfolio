@@ -30,20 +30,22 @@ const Navbar = () => {
         <header>
             {/* Fixed navbar */}
             <nav className={cn(
-                "fixed w-full z-40 transition-all duration-300",
-                isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-md" : "py-5"
+                "fixed w-full z-40 border-b border-transparent transition-all duration-300",
+                isScrolled
+                    ? "py-3 bg-background/80 backdrop-blur-xl shadow-[0_8px_30px_hsl(195_45%_3%_/_0.18)] border-border/70"
+                    : "py-5 bg-background/25 backdrop-blur-sm"
             )}>
                 <div className="container flex items-center justify-between">
                     <a className='text-xl font-bold text-primary flex items-center'
                         href='#hero'>
                         <span className='relative z-10'>
                             {""}
-                            <span className='text-glow text-foreground'> Nirmal's </span> Portfolio
+                            <span className='text-glow text-foreground'> Nirmal's </span><span className="text-primary">/</span> Portfolio
                         </span>
                     </a>
 
                     {/* Desktop nav */}
-                    <div className="hidden md:flex space-x-8">
+                    <div className="hidden md:flex items-center gap-7 text-sm font-medium">
                         {navItems.map((item, key) => (
                             <a
                                 key={key}
