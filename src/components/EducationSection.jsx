@@ -6,6 +6,7 @@ const educationEntries = [
     {
         period: '2023 – Present',
         institution: 'SLIIT',
+        website: 'https://www.sliit.lk/',
         title: 'BSc (Hons) in Information Technology',
         subtitle: 'Specialization in Software Engineering',
         icon: '/icons/sliit.png',
@@ -13,6 +14,7 @@ const educationEntries = [
     {
         period: '2013 – 2023',
         institution: 'Royal College',
+        website: 'https://royalcollege.lk/',
         title: 'G.C.E. Advanced Level – Physical Sciences',
         subtitle: 'G.C.E. Ordinary Level',
         icon: '/icons/royalcollege.png',
@@ -66,7 +68,14 @@ const EducationSection = () => {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="text-xl md:text-2xl font-bold text-foreground">{entry.institution}</h3>
+                                                <a
+                                                    href={entry.website}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-block text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300"
+                                                >
+                                                    {entry.institution}
+                                                </a>
                                                 <p className="mt-2 text-base font-medium text-foreground/90">{entry.title}</p>
                                                 <p className="mt-2 text-sm text-muted-foreground">{entry.subtitle}</p>
                                             </motion.article>

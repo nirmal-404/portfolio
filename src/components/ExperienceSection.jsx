@@ -1,14 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { BriefcaseBusiness, Building2, Sparkles } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const experienceEntries = [
     {
         period: '2024 – Present',
         company: 'Atlato Pty Ltd',
+        website: 'https://www.atlato.com/',
         role: 'Intern Software Engineer',
-        icon: BriefcaseBusiness,
+        icon: '/icons/atlato.png',
         points: [
             'Developed scalable backend services using Node.js, TypeScript, MySQL, and Sequelize ORM, building and maintaining REST APIs for enterprise applications.',
             'Designed the database schema and implemented the backend of a Global Approval System supporting multi-level, cross-department workflows and rule-based auto-approvals.',
@@ -36,7 +36,6 @@ const ExperienceSection = () => {
 
                     <div className="space-y-8 md:space-y-12">
                         {experienceEntries.map((entry, index) => {
-                            const Icon = entry.icon
                             const isLeft = index % 2 === 0
 
                             return (
@@ -56,15 +55,26 @@ const ExperienceSection = () => {
                                         )}>
                                             <motion.article className="gradient-border p-6 card-hover shadow-sm">
                                                 <div className="flex items-center gap-3 mb-4 md:justify-start">
-                                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                                        <Icon className="h-5 w-5" />
+                                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 p-1 text-primary overflow-hidden border border-primary/20 shadow-sm">
+                                                        <img
+                                                            src={entry.icon}
+                                                            alt={entry.company}
+                                                            className="h-full w-full rounded-full object-cover"
+                                                        />
                                                     </div>
                                                     <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                                                         {entry.period}
                                                     </span>
                                                 </div>
 
-                                                <h3 className="text-xl md:text-2xl font-bold text-foreground">{entry.company}</h3>
+                                                <a
+                                                    href={entry.website}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-block text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300"
+                                                >
+                                                    {entry.company}
+                                                </a>
                                                 <p className="mt-2 text-base font-medium text-foreground/90">{entry.role}</p>
 
                                                 <ul className="mt-5 space-y-3 text-sm text-muted-foreground text-left md:text-left">
