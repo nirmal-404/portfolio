@@ -1,5 +1,6 @@
 import React from 'react'
-import { Facebook, Linkedin, Mail, MapPin, Phone, Send, Loader } from "lucide-react"
+import { Linkedin, Mail, MapPin, Phone, Send, Loader } from "lucide-react"
+import { siFacebook, siGithub, siMedium } from 'simple-icons'
 import { cn } from '@/lib/utils'
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -122,12 +123,24 @@ const ContactSection = () => {
 
                         <div className='pt-8'>
                             <h4 className='font-medium mb-4'>Connect with me</h4>
-                            <div className="flex space-x-4 justify-center">
-                                <a href='https://web.facebook.com/manusha.perera.526/about' target='_blank'>
-                                    <Facebook />
+                            <div className="flex flex-wrap gap-4 justify-center">
+                                <a href='https://web.facebook.com/manusha.perera.526/about' target='_blank' rel='noreferrer' className='p-3 rounded-full bg-primary/10 text-foreground hover:text-primary transition-colors' aria-label='Facebook'>
+                                    <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" role="img" aria-hidden="true">
+                                        <path d={siFacebook.path} />
+                                    </svg>
                                 </a>
-                                <a href='https://www.linkedin.com/in/nirmal-perera-65446b252/' target='_blank'>
+                                <a href='https://www.linkedin.com/in/nirmal-perera-65446b252/' target='_blank' rel='noreferrer' className='p-3 rounded-full bg-primary/10 text-foreground hover:text-primary transition-colors' aria-label='LinkedIn'>
                                     <Linkedin />
+                                </a>
+                                <a href='https://github.com/nirmal-404' target='_blank' rel='noreferrer' className='p-3 rounded-full bg-primary/10 text-foreground hover:text-primary transition-colors' aria-label='GitHub'>
+                                    <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" role="img" aria-hidden="true">
+                                        <path d={siGithub.path} />
+                                    </svg>
+                                </a>
+                                <a href='https://medium.com/@nirmalperera2509' target='_blank' rel='noreferrer' className='p-3 rounded-full bg-primary/10 text-foreground hover:text-primary transition-colors' aria-label='Medium'>
+                                    <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" role="img" aria-hidden="true">
+                                        <path d={siMedium.path} />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
