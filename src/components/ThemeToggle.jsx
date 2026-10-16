@@ -5,8 +5,8 @@ const ThemeToggle = () => {
 
 
     useEffect(() => {
-        localStorage.setItem('theme', 'dark')
-        const theme = localStorage.getItem('theme')
+
+        const theme = (localStorage.getItem('theme') || 'dark')
         if (theme === 'dark') {
             document.documentElement.classList.add('dark')
             setIsDarkMode(true)
@@ -22,8 +22,9 @@ const ThemeToggle = () => {
             localStorage.setItem('theme', 'light')
             setIsDarkMode(false)
         } else {
-            document.documentElement.classList.add('dark')
             localStorage.setItem('theme', 'dark')
+            document.documentElement.classList.add('dark')
+
             setIsDarkMode(true)
         }
     }
@@ -32,7 +33,7 @@ const ThemeToggle = () => {
         <button
             onClick={toggleTheme}
             className={cn(
-                "hidden md:flex items-center justify-center h-10 w-10 rounded-full border border-border/70 bg-background/70 text-foreground shadow-sm transition-all duration-300 hover:border-primary/60 hover:text-primary",
+                "flex items-center justify-center h-10 w-10 rounded-full border border-border/70 bg-background/70 text-foreground shadow-sm transition-all duration-300 hover:border-primary/60 hover:text-primary",
                 "focus:outline-hidden"
             )}
             aria-label="Toggle theme"

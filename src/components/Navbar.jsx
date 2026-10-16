@@ -1,107 +1,26 @@
-import { HeartOff, Menu, X } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
-import { cn } from '@/lib/utils'
-import ThemeToggle from "./ThemeToggle"
-
-const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Education", href: "#education" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Certifications", href: "#certifications" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
-]
-const Navbar = () => {
-
-    const [isScrolled, setIsScrolled] = useState(false)
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10)
-        }
-
-        window.addEventListener("scroll", handleScroll)
-        handleScroll() // Check initial scroll position
-
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
-
-    return (
-        <header>
-            {/* Fixed navbar */}
-            <nav className={cn(
-                "fixed w-full z-40 border-b border-transparent transition-all duration-300",
-                isScrolled
-                    ? "py-3 bg-background/80 backdrop-blur-xl shadow-[0_8px_30px_hsl(195_45%_3%_/_0.18)] border-border/70"
-                    : "py-5 bg-background/25 backdrop-blur-sm"
-            )}>
-                <div className="container flex items-center justify-between gap-4">
-                    <a className='text-xl font-bold text-primary flex items-center'
-                        href='#hero'>
-                        <span className='relative z-10'>
-                            {""}
-                            <span className='text-glow text-foreground'> Nirmal's </span><span className="text-primary">/</span> Portfolio
-                        </span>
-                    </a>
-
-                    <div className="hidden md:flex items-center gap-4">
-                        {/* Desktop nav */}
-                        <div className="flex items-center gap-7 text-sm font-medium">
-                            {navItems.map((item, key) => (
-                                <a
-                                    key={key}
-                                    href={item.href}
-                                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                >
-                                    {item.name}
-                                </a>
-                            ))}
-                        </div>
-
-                        <ThemeToggle />
-                    </div>
-
-                    {/* Mobile nav toggle */}
-                    <div className="md:hidden flex items-center gap-2">
-                        <ThemeToggle />
-                        <button className='p-2 text-foreground z-50'
-                            onClick={() => setIsMenuOpen((prev) => !prev)}
-                            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                        >
-                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
-                    </div>
-                </div>
-            </nav>
-
-            {/* Mobile menu overlay - completely separate from navbar */}
-            <div
-                className={cn(
-                    "fixed inset-0 z-30 bg-background backdrop-blur-md flex flex-col items-center justify-center",
-                    "transition-all duration-300 md:hidden",
-                    isMenuOpen
-                        ? "opacity-100 pointer-events-auto"
-                        : "opacity-0 pointer-events-none"
-                )}
-            >
-                <div className="flex flex-col space-y-8 text-xl">
-                    {navItems.map((item, key) => (
-                        <a
-                            key={key}
-                            href={item.href}
-                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            {item.name}
-                        </a>
-                    ))}
-                </div>
-            </div>
-        </header>
-    )
+import { Home, Briefcase, User, ArrowUpRight } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
+const items = [{
+  name: 'Home',
+  id: 'home',
+  icon: Home
+}, {
+  name: 'Work',
+  id: 'work',
+  icon: Briefcase
+}, {
+  name: 'About',
+  id: 'about',
+  icon: User
+}];
+export default function Navbar({
+  view,
+  onContact
+}) {
+  const links = items.map(({
+    name,
+    id,
+    icon: Icon
+  }) => <a key={id} href={'#' + id} aria-current={view === id ? 'page' : undefined}><Icon size={17} aria-hidden="true" /><span>{name}</span></a>);
+  return <header><div className="portfolio-header"><div className="container flex items-center justify-between gap-3"><a href="#home" className="font-bold text-lg">Nirmal<span className="text-primary">.</span></a><nav aria-label="Main navigation" className="desktop-navigation">{links}</nav><div className="flex items-center gap-2"><ThemeToggle /><button onClick={onContact} className="contact-trigger">Let’s talk <ArrowUpRight size={16} /></button></div></div></div><nav aria-label="Mobile navigation" className="mobile-dock">{links}</nav></header>;
 }
-
-export default Navbar

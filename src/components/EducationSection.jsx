@@ -11,6 +11,13 @@ const educationEntries = [
         title: 'BSc (Hons) in Information Technology',
         subtitle: 'Specialization in Software Engineering',
         icon: '/icons/sliit.png',
+        activities: [
+            {
+                label: 'Member of the Mozilla Campus Club of SLIIT',
+                icon: '/icons/mozilla.png',
+                website: 'https://www.sliitmozilla.org/',
+            },
+        ],
     },
     {
         period: '2013 – 2023',
@@ -19,6 +26,11 @@ const educationEntries = [
         title: 'G.C.E. Advanced Level – Physical Sciences',
         subtitle: 'G.C.E. Ordinary Level',
         icon: '/icons/royalcollege.png',
+        activities: [
+            { label: 'Former cadet band member' },
+            { label: 'Former scout' },
+            { label: 'Member of the Gavel Club' },
+        ],
     },
 ]
 
@@ -30,7 +42,7 @@ const EducationSection = () => {
                     My <span className="text-primary">Education</span>
                 </h2>
                 <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-                    Academic background and qualifications that shaped my software engineering journey.
+                    My academic background, extracurricular activities, and campus community involvement.
                 </p>
 
                 <div className="relative mx-auto max-w-3xl">
@@ -80,6 +92,28 @@ const EducationSection = () => {
                                                 </a>
                                                 <p className="mt-2 text-base font-medium text-foreground/90">{entry.title}</p>
                                                 <p className="mt-2 text-sm text-muted-foreground">{entry.subtitle}</p>
+                                                <div className="mt-5 border-t border-border pt-4 text-left">
+                                                    <h3 className="text-sm font-semibold text-foreground">
+                                                        {entry.activitiesHeading || 'Beyond the classroom'}
+                                                    </h3>
+                                                    <ul className="mt-3 space-y-3 text-sm text-muted-foreground">
+                                                        {entry.activities.map(activity => (
+                                                            <li key={activity.label} className="flex items-start gap-3">
+                                                                {activity.icon ? (
+                                                                    <img src={activity.icon} alt="Mozilla Campus Club logo" width={40} height={40} className="h-10 w-10 shrink-0 object-contain" />
+                                                                ) : (
+                                                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                                                                )}
+                                                                {activity.website ? (
+                                                                    <a href={activity.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary">
+                                                                        {activity.label}
+                                                                        <ExternalLink size={14} className="shrink-0" aria-hidden="true" />
+                                                                    </a>
+                                                                ) : <span>{activity.label}</span>}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
                                             </motion.article>
                                         </div>
                                     </div>

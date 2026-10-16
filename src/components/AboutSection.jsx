@@ -4,7 +4,7 @@ import { Briefcase, Code, User } from 'lucide-react'
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const AboutSection = () => {
+const AboutSection = ({ onContact }) => {
   return (
     <section id="about" className="py-24 px-4 relative">
       {""}
@@ -29,12 +29,12 @@ const AboutSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
+              <a onClick={e => { e.preventDefault(); onContact() }} href="#contact" className="cosmic-button">
                 {" "}
                 Get In Touch
               </a>
-              <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
-                Download CV
+              <a href="mailto:nirmalperera2509@gmail.com?subject=Resume%20request" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                Request resume
               </a>
             </div>
           </div>

@@ -65,6 +65,8 @@ const skillsByCategory = {
   devops: [
     { name: "Docker", icon: "https://www.svgrepo.com/show/448221/docker.svg" },
     { name: "Kubernetes", icon: "https://www.svgrepo.com/show/376331/kubernetes.svg" },
+    { name: "Terraform", icon: "https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" },
+    { name: "Ansible", icon: "https://www.vectorlogo.zone/logos/ansible/ansible-icon.svg" },
     { name: "GitHub Actions", icon: "https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg" },
     { name: "Azure", icon: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" },
     { name: "Vercel", icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" },
@@ -73,7 +75,7 @@ const skillsByCategory = {
     { name: "LocalStack", icon: "https://cdn.prod.website-files.com/6539036f80ddc9e9a467134e/65546e419e7e9b3f9cf3408c_favicon.png" },
     { name: "Jenkins", icon: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" },
     { name: "Prometheus", icon: "https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg" },
-    { name: "Grafana", icon: "https://www.svgrepo.com/show/353829/grafana.svg" },
+    { name: "Grafana", icon: "https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" },
     { name: "Sentry", icon: "https://www.vectorlogo.zone/logos/sentryio/sentryio-ar21~bgwhite.svg" },
   ],
   tools: [

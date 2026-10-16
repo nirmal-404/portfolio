@@ -37,16 +37,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <nav aria-label="Footer navigation" className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                    <a href="#hero" className="hover:text-primary transition-colors">Home</a>
-                    <a href="#about" className="hover:text-primary transition-colors">About</a>
-                    <a href="#education" className="hover:text-primary transition-colors">Education</a>
-                    <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
-                    <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-                    <a href="#certifications" className="hover:text-primary transition-colors">Certifications</a>
-                    <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
-                    <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-                </nav>
+                <nav aria-label="Footer navigation" className="flex gap-5 text-sm text-muted-foreground"><a href="#home">Home</a><a href="#work">Work</a><a href="#about">About</a></nav>
 
                 <div className="flex items-center gap-3">
                     {socialLinks.map((link) => (
@@ -68,8 +59,8 @@ const Footer = () => {
                         </a>
                     ))}
                     <a
-                        href="#hero"
-                        aria-label="Back to top"
+                        href="#home"
+                        aria-label="Go home"
                         className="ml-1 flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:opacity-90"
                     >
                         <ArrowUp size={18} />
