@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, Download, ExternalLink, Copy, Check, Maximize2 } from 'lucide-react'
+import React, { useState } from 'react'
+import { Download, ExternalLink, Copy, Check, Maximize2 } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
-import { motion } from 'framer-motion'
 
 const certifications = [
     {
@@ -137,65 +136,9 @@ const certifications = [
 ]
 
 const CertificationsSection = () => {
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const [touchStart, setTouchStart] = useState(0)
-    const [touchEnd, setTouchEnd] = useState(0)
-    const [certificationsPerView, setCertificationsPerView] = useState(3)
     const [selectedCert, setSelectedCert] = useState(null)
     const [copiedCode, setCopiedCode] = useState(null)
     const { toast } = useToast()
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 768) {
-                setCertificationsPerView(1)
-            } else if (window.innerWidth < 1024) {
-                setCertificationsPerView(2)
-            } else {
-                setCertificationsPerView(3)
-            }
-        }
-
-        handleResize()
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
-
-    const totalSlides = Math.ceil(certifications.length / certificationsPerView)
-
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1))
-    }
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1))
-    }
-
-    const goToSlide = (slideIndex) => {
-        setCurrentSlide(slideIndex)
-    }
-
-    const handleTouchStart = (e) => {
-        setTouchStart(e.targetTouches[0].clientX)
-    }
-
-    const handleTouchMove = (e) => {
-        setTouchEnd(e.targetTouches[0].clientX)
-    }
-
-    const handleTouchEnd = () => {
-        if (touchStart - touchEnd > 50) {
-            nextSlide()
-        }
-        if (touchStart - touchEnd < -50) {
-            prevSlide()
-        }
-    }
-
-    const getVisibleCertifications = () => {
-        const startIndex = currentSlide * certificationsPerView
-        return certifications.slice(startIndex, startIndex + certificationsPerView)
-    }
 
     const handleCopyCode = (code) => {
         navigator.clipboard.writeText(code)
@@ -218,7 +161,7 @@ const CertificationsSection = () => {
 
     return (
         <section id="certifications" className="py-24 px-4 relative">
-            <div className="container mx-auto max-w-7xl">
+            <div className="container mx-auto max-w-6xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                     My <span className="text-primary">Certifications</span>
                 </h2>
@@ -226,148 +169,48 @@ const CertificationsSection = () => {
                     Professional certifications and courses I have completed to expand my skills
                 </p>
 
-                <div className="relative">
-                    {/* Navigation Buttons */}
-                    <button
-                        onClick={prevSlide}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-primary text-white hover:bg-primary/80 shadow-lg rounded-full p-3 transition-all duration-300"
-                        aria-label="Previous slide"
-                    >
-                        <ChevronLeft className="w-6 h-6" />
-                    </button>
-
-                    <div
-                        className="overflow-hidden"
-                        onTouchStart={handleTouchStart}
-                        onTouchMove={handleTouchMove}
-                        onTouchEnd={handleTouchEnd}
-                    >
-                        <div
-                            className="flex transition-transform duration-500 ease-in-out"
-                            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                        >
-                            {[...certifications].reverse().map((cert) => (
-                                <div
-                                    key={cert.id}
-                                    className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
-                                >
-                                    <motion.div
-                                        whileHover={{ y: -8 }}
-                                        transition={{ type: "spring", stiffness: 280, damping: 20 }}
-                                        className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-[0_20px_45px_hsl(195_45%_3%_/_0.2)] transition-shadow duration-300 h-full flex flex-col border border-primary/10 hover:border-primary/30"
+                <div className="project-grid">
+                    {[...certifications].reverse().map(cert => (
+                        <article key={cert.id} className="project-tile certification-tile">
+                            <button
+                                type="button"
+                                className="certification-preview"
+                                onClick={() => setSelectedCert(cert)}
+                                aria-label={`Preview ${cert.title}`}
+                            >
+                                <img src={cert.preview} alt={cert.title} loading="lazy" />
+                                <span className="certification-expand"><Maximize2 size={18} /> Preview</span>
+                            </button>
+                            <div className="p-5 flex flex-col">
+                                <p className="text-primary text-xs font-semibold uppercase tracking-wider">{cert.issuer} · {cert.date}</p>
+                                <h3 className="mt-2 text-lg font-semibold line-clamp-2">{cert.title}</h3>
+                                <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-border pt-4">
+                                    <button
+                                        type="button"
+                                        onClick={() => handleDownload(cert.download, cert.title)}
+                                        className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
                                     >
-                                        {/* Certificate Image Hero */}
-                                        <div
-                                            className="w-full aspect-[16/10] overflow-hidden cursor-pointer relative group bg-gradient-to-br from-primary/10 to-secondary/10 border-b border-primary/20"
-                                            onClick={() => setSelectedCert(cert)}
-                                        >
-                                            <img
-                                                src={cert.preview}
-                                                alt=""
-                                                aria-hidden="true"
-                                                className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50"
-                                            />
-                                            <img
-                                                src={cert.preview}
-                                                alt={cert.title}
-                                                className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                                            />
-                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                                                <div className="bg-primary/90 hover:bg-primary rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
-                                                    <Maximize2 className="w-6 h-6 text-white" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Card Content */}
-                                        <div className="p-4 flex flex-col flex-1">
-                                            {/* Title and Issuer */}
-                                            <div className="mb-4">
-                                                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
-                                                    {cert.issuer}
-                                                </p>
-                                                <h3 className="text-lg font-bold text-foreground line-clamp-2">
-                                                    {cert.title}
-                                                </h3>
-                                            </div>
-
-                                            {/* Action Buttons Row */}
-                                            <div className="flex justify-around items-center mb-4 py-3 border-y border-primary/10">
-                                                {/* Expand Button */}
-                                                <button
-                                                    onClick={() => setSelectedCert(cert)}
-                                                    className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors duration-200"
-                                                    title="Expand preview"
-                                                >
-                                                    <Maximize2 className="w-5 h-5" />
-                                                    <span className="text-xs font-medium">Expand</span>
-                                                </button>
-
-                                                {/* Download Button */}
-                                                <button
-                                                    onClick={() => handleDownload(cert.download, cert.title)}
-                                                    className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors duration-200"
-                                                    title="Download certificate"
-                                                >
-                                                    <Download className="w-5 h-5" />
-                                                    <span className="text-xs font-medium">Download</span>
-                                                </button>
-
-                                                {/* Copy Code Button */}
-                                                <button
-                                                    onClick={() => handleCopyCode(cert.verificationCode)}
-                                                    className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors duration-200"
-                                                    title="Copy verification code"
-                                                >
-                                                    {copiedCode === cert.verificationCode ? (
-                                                        <Check className="w-5 h-5 text-primary" />
-                                                    ) : (
-                                                        <Copy className="w-5 h-5" />
-                                                    )}
-                                                    <span className="text-xs font-medium">
-                                                        {copiedCode === cert.verificationCode ? "Copied!" : "Copy Code"}
-                                                    </span>
-                                                </button>
-                                            </div>
-
-                                            {/* Verify Button */}
-                                            <a
-                                                href={cert.verificationLink}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-primary to-primary/80 text-white rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 font-semibold text-sm"
-                                            >
-                                                <ExternalLink className="w-4 h-4" />
-                                                Verify Certificate
-                                            </a>
-                                        </div>
-                                    </motion.div>
+                                        <Download size={16} /> Download
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => handleCopyCode(cert.verificationCode)}
+                                        className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+                                    >
+                                        {copiedCode === cert.verificationCode ? <Check size={16} /> : <Copy size={16} />}
+                                        {copiedCode === cert.verificationCode ? 'Copied!' : 'Copy code'}
+                                    </button>
+                                    <a
+                                        href={cert.verificationLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-sm text-primary"
+                                    >
+                                        Verify <ExternalLink size={15} />
+                                    </a>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <button
-                        onClick={nextSlide}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-primary text-white hover:bg-primary/80 shadow-lg rounded-full p-3 transition-all duration-300"
-                        aria-label="Next slide"
-                    >
-                        <ChevronRight className="w-6 h-6" />
-                    </button>
-                </div>
-
-                {/* Dots Navigation */}
-                <div className="flex justify-center mt-8 space-x-2">
-                    {Array.from({ length: totalSlides }).map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
-                                ? "bg-primary w-6"
-                                : "bg-primary/30 hover:bg-primary/50"
-                                }`}
-                            aria-label={`Go to slide ${index + 1}`}
-                        />
+                            </div>
+                        </article>
                     ))}
                 </div>
             </div>
