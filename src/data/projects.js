@@ -16,7 +16,7 @@ const projects = [
         image: "/projects/24_HealthSenseAI.png",
         tags: ["React", "Microservices", "Langgraph", "Tailwind", "Firebase", "Node.js", "Docker", "K8s"],
         urls: [
-            { type: "github", href: "https://github.com/nirmal-404/EcoShore-Frontend" },
+            { type: "github", href: "https://github.com/nirmal-404/HealthSenseAI" },
         ]
     },
     {
@@ -288,4 +288,3 @@ const projects = [
 
 
 export default projects
-
