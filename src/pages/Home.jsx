@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { Outlet, useLocation, useOutletContext } from 'react-router-dom';
 import { X } from 'lucide-react';
 import StraBackground from '@/components/StraBackground';
@@ -23,6 +23,7 @@ export default function Home() {
   const hashTarget = hash.replace(/^#/, '');
   const targetFromPath = pathParts[0] || 'home';
   const target = hashTarget || targetFromPath;
+  const aboutSection = hashTarget || (pathParts[0] === 'about' ? pathParts[1] : '');
   const isAboutTarget = pathParts[0] === 'about' || hashTarget === 'about' || hashTarget.startsWith('about/');
   const view = ['work', 'projects'].includes(pathParts[0]) || ['work', 'projects'].includes(hashTarget) ? 'work' : isAboutTarget ? 'about' : 'home';
   const contact = useRef(null),
@@ -30,21 +31,28 @@ export default function Home() {
     initial = useRef(true);
   const openContact = () => contact.current?.showModal();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (target === 'contact') {
       openContact();
       return;
     }
-    window.scrollTo({
-      top: 0,
-      behavior: 'instant'
-    });
+    const section = (pathname === '/about' || pathname.startsWith('/about/')) && aboutSection
+      ? document.getElementById(aboutSection)
+      : null;
+    if (section) {
+      section.scrollIntoView({ behavior: 'instant', block: 'start' });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+      });
+    }
     if (!initial.current) main.current.focus({
       preventScroll: true
     });
     initial.current = false;
     document.title = view[0].toUpperCase() + view.slice(1) + ' · Nirmal Perera';
-  }, [hash, target, view, pathname]);
+  }, [hash, target, view, pathname, aboutSection]);
 
   return (
     <div className="portfolio-app min-h-screen bg-background text-foreground overflow-x-hidden">
