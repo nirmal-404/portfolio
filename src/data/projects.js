@@ -1,5 +1,13 @@
 const projects = [
     {
+        id: 26,
+        title: "NCR Solutions",
+        description: "Portfolio of NCR Solutions assignments, software solutions, and digital projects developed for business and operational needs.",
+        image: "/projects/26_ncrsolutions.png",
+        tags: ["NCR Solutions", "Assignments", "Software Solutions", "Web Apps", "Business Systems"],
+        urls: []
+    },
+    {
         id: 24,
         title: "HealthSenseAi",
         description: "A hospital mangement system with AI symptom check",
