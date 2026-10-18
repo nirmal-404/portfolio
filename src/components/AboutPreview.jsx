@@ -47,7 +47,7 @@ export default function AboutPreview() {
     <section className="container max-w-6xl mb-10 text-left" aria-labelledby="about-preview-title">
       <p className="section-kicker">My background at a glance</p>
       <h2 id="about-preview-title" className="mb-6 text-2xl font-bold sm:text-3xl">
-        Industry experience. <span className="text-primary">A foundation to build on.</span>
+        A foundation built through <span className="text-primary">learning, experience, and curiosity.</span>
       </h2>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
         {credentials.map(({ title, organization, detail, highlights, href, logo, icon: Icon }, index) => (
