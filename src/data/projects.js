@@ -30,10 +30,10 @@ const projects = [
             { module: "(BE)", type: "github", href: "https://github.com/nirmal-404/EcoShore-Backend" }
         ]
     },
-    // 22. ChatApp
+    // 22. Chat app
     {
         id: 22,
-        title: "ChatApp",
+        title: "Chat App",
         description: "A real-time chat application with secure user-to-user messaging using Socket.IO and MongoDB.",
         image: "/projects/22_chat-app.png",
         tags: ["React", "daisyUI", "Tailwind CSS", "Zustand", "Socket.IO", "Node.js", "JWT", "MongoDB"],
@@ -45,7 +45,7 @@ const projects = [
     // 21. Feastr mobile app
     {
         id: 21,
-        title: "Feastr — Mobile App",
+        title: "Feastr Mobile App",
         description: "A cross-platform mobile application built with React Native.",
         image: "/projects/21_feastr.jpg",
         tags: ["React Native", "Appwrite", "Sentry", "Zustand", "NativeWind", "Expo", "Mobile App",],
@@ -57,7 +57,7 @@ const projects = [
     {
         id: 20,
         title: "Restaurant POS Desktop App",
-        description: "Offline POS desktop app using .NET MAUI, XAML, and SQLite for Windows/macOS.",
+        description: "An offline point-of-sale desktop app built with .NET MAUI, XAML, and SQLite for Windows and macOS.",
         image: "/projects/20_restarent-pos.png",
         tags: [".NET MAUI", "XAML", "SQLite", "C#", "Desktop App", "Cross-Platform",],
         urls: [
@@ -101,7 +101,7 @@ const projects = [
     {
         id: 16,
         title: "Finance Tracker",
-        description: "Cross-platform app to manage personal finances.",
+        description: "A cross-platform app for managing personal finances.",
         image: "/projects/16_finance-tracker.png",
         tags: ["React Native", "Expo", "Node.js", "Upstash", "Clerk", "PostgreSQL", "Railway"],
         urls: [
@@ -137,7 +137,7 @@ const projects = [
     {
         id: 13,
         title: "Rasaa Agro Products",
-        description: "An e-commerce platform built with the MERN stack. Integrations with payment gateways and email services.",
+        description: "An e-commerce platform built with the MERN stack, with payment gateway and email service integrations.",
         image: "/projects/13_mern-ecommerce.png",
         tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind CSS", "shadcn/ui", "Full-Stack"],
         urls: [
@@ -159,7 +159,7 @@ const projects = [
     {
         id: 11,
         title: "PostgreSQL REST API",
-        description: "A REST API built with PostgreSQL and Prisma ORM, with Prometheus and Grafana monitoring.",
+        description: "A REST API built with PostgreSQL and Prisma ORM, monitored with Prometheus and Grafana.",
         image: "/projects/11_docker-prisma-prometheus-graphan.png",
         tags: ["PostgreSQL", "Prisma", "Prometheus", "Grafana", "Docker", "Backend"],
         urls: [
@@ -181,7 +181,7 @@ const projects = [
     {
         id: 9,
         title: "Java MVC E-Commerce System",
-        description: "An e-commerce application built with Java Servlets, JSP, and the MVC architecture, styled with Tailwind CSS.",
+        description: "An e-commerce application built with Java Servlets and JSP using the MVC architecture, styled with Tailwind CSS.",
         image: "/projects/09_jsp-ecommerce.png",
         tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind CSS", "Full-Stack"],
         urls: [
@@ -252,7 +252,7 @@ const projects = [
     {
         id: 3,
         title: "Rock Paper Scissors",
-        description: "A Rock Paper Scissors game you can play against the computer.",
+        description: "A Rock Paper Scissors game playable against the computer.",
         image: "/projects/03_rock-paper-scissor.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
@@ -264,7 +264,7 @@ const projects = [
     {
         id: 2,
         title: "Roman Numeral Converter",
-        description: "A Roman numeral converter built with HTML, CSS, and JavaScript.",
+        description: "Converts numbers to Roman numerals using HTML, CSS, and JavaScript.",
         image: "/projects/02_roman-number-converter.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
