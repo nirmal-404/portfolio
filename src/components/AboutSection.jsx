@@ -2,6 +2,7 @@
 
 import { Briefcase, Code, User } from 'lucide-react'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const AboutSection = ({ onContact }) => {
   return (
