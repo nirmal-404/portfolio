@@ -5,7 +5,9 @@ const projects = [
         description: "Portfolio of NCR Solutions assignments, software solutions, and digital projects developed for business and operational needs.",
         image: "/projects/26_ncrsolutions.png",
         tags: ["NCR Solutions", "Assignments", "Software Solutions", "Web Apps", "Business Systems"],
-        urls: []
+        urls: [
+            { type: "external", href: "https://ncrsolutions.vercel.app" }
+        ]
     },
     {
         id: 24,
