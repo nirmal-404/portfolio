@@ -25,8 +25,7 @@ const HeroSection = ({ onContact }) => {
                 </h1>
                 <p className='text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-8 opacity-0 animate-fade-in-delay-3'>
                     <span className="font-semibold text-foreground">Former Software Engineering Intern at Atlato.</span>
-                    {' '}Software Engineering undergraduate at SLIIT and Royal College alumnus,
-                    building web, mobile, and backend projects with additional training and certifications.
+                    {' '}Software Engineering undergraduate at SLIIT.
                 </p>
 
                 <div className='pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-delay-4'>
