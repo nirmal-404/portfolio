@@ -9,7 +9,11 @@ function App() {
     <Toaster />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/work" element={<Home />}></Route>
+          <Route path="/about" element={<Home />}></Route>
+          <Route path="/about/:view" element={<Home />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>

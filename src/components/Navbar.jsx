@@ -21,6 +21,6 @@ export default function Navbar({
     name,
     id,
     icon: Icon
-  }) => <a key={id} href={'#' + id} aria-current={view === id ? 'page' : undefined}><Icon size={17} aria-hidden="true" /><span>{name}</span></a>);
-  return <header><div className="portfolio-header"><div className="container flex items-center justify-between gap-3"><a href="#home" className="font-bold text-lg">Nirmal<span className="text-primary">.</span></a><nav aria-label="Main navigation" className="desktop-navigation">{links}</nav><div className="flex items-center gap-2"><ThemeToggle /><button onClick={onContact} className="contact-trigger">Let’s talk <ArrowUpRight size={16} /></button></div></div></div><nav aria-label="Mobile navigation" className="mobile-dock">{links}</nav></header>;
+  }) => <a key={id} href={id === 'home' ? '/' : `/${id}`} aria-current={view === id ? 'page' : undefined}><Icon size={17} aria-hidden="true" /><span>{name}</span></a>);
+  return <header><div className="portfolio-header"><div className="container flex items-center justify-between gap-3"><a href="/" className="font-bold text-lg">Nirmal<span className="text-primary">.</span></a><nav aria-label="Main navigation" className="desktop-navigation">{links}</nav><div className="flex items-center gap-2"><ThemeToggle /><button onClick={onContact} className="contact-trigger">Let’s talk <ArrowUpRight size={16} /></button></div></div></div><nav aria-label="Mobile navigation" className="mobile-dock">{links}</nav></header>;
 }

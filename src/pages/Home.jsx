@@ -22,10 +22,14 @@ const aboutViews = {
 };
 export default function Home() {
   const {
+    pathname,
     hash
   } = useLocation();
-  const target = hash.slice(1);
-  const aboutKey = target.startsWith('about/') ? target.split('/')[1] : target;
+  const pathParts = pathname.split('/').filter(Boolean);
+  const hashTarget = hash.replace(/^#/, '');
+  const targetFromPath = pathParts[0] || 'home';
+  const target = hashTarget || targetFromPath;
+  const aboutKey = pathParts[0] === 'about' ? (pathParts[1] || 'overview') : hashTarget.startsWith('about/') ? hashTarget.split('/')[1] : 'overview';
   const view = ['work', 'projects'].includes(target) ? 'work' : target === 'about' || Object.hasOwn(aboutViews, aboutKey) ? 'about' : 'home';
   const activeAbout = Object.hasOwn(aboutViews, aboutKey) ? aboutKey : 'overview';
   const AboutContent = aboutViews[activeAbout];
