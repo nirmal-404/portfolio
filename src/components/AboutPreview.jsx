@@ -5,7 +5,7 @@ const credentials = [
     title: 'Former Software Engineering Intern',
     organization: 'Atlato Pty Ltd',
     detail: 'Built backend services, approval workflows, and event-driven integrations.',
-    href: '#about/experience',
+    href: '/about/experience',
     logo: '/icons/atlato.png',
   },
   {
@@ -13,7 +13,7 @@ const credentials = [
     organization: 'SLIIT',
     detail: 'BSc (Hons) in IT, specializing in Software Engineering.',
     highlights: ['Member of the Mozilla Campus Club of SLIIT'],
-    href: '#about/education',
+    href: '/about/education',
     logo: '/icons/sliit.png',
   },
   {
@@ -21,21 +21,21 @@ const credentials = [
     organization: 'Royal College',
     detail: '2013–2023 · A/L Physical Sciences',
     highlights: ['Former cadet band member', 'Former scout', 'Member of the Gavel Club'],
-    href: '#about/education',
+    href: '/about/education',
     logo: '/icons/royalcollege.png',
   },
   {
     title: 'Hands-on Project Experience',
     organization: 'Web · Mobile · Backend',
     detail: 'Explore applications, microservices, and practical engineering projects.',
-    href: '#work',
+    href: '/work',
     icon: Code2,
   },
   {
     title: 'Additional Certifications',
     organization: 'DevOps · AI/ML · Web Development',
     detail: 'Training from KodeKloud, SLIIT CODE, and more.',
-    href: '#about/certifications',
+    href: '/about/certifications',
     icon: Award,
   },
 ]

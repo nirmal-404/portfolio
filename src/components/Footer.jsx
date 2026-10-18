@@ -37,7 +37,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <nav aria-label="Footer navigation" className="flex gap-5 text-sm text-muted-foreground"><a href="#home">Home</a><a href="#work">Work</a><a href="#about">About</a></nav>
+                <nav aria-label="Footer navigation" className="flex gap-5 text-sm text-muted-foreground"><a href="/">Home</a><a href="/work">Work</a><a href="/about">About</a></nav>
 
                 <div className="flex items-center gap-3">
                     {socialLinks.map((link) => (
@@ -59,7 +59,7 @@ const Footer = () => {
                         </a>
                     ))}
                     <a
-                        href="#home"
+                        href="/"
                         aria-label="Go home"
                         className="ml-1 flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:opacity-90"
                     >
