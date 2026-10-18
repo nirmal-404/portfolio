@@ -18,7 +18,7 @@ const AboutSection = ({ onContact }) => {
               Passionate Web Developer & Tech Creator
             </h3>
             <p className="text-muted-foreground">
-              With 1+ years of experience in web development,
+              With 3+ years of experience in web development,
               I specialize in creating responsive, accessible, and
               performant web applications using modern technologies.
             </p>
@@ -74,7 +74,7 @@ const AboutSection = ({ onContact }) => {
                 <div className='text-left'>
                   <h4 className='font-semibold text-lg'>Project Management</h4>
                   <p className='text-muted-foreground'>
-                    Leading  projects from conception to completion with agile methodologies.
+                    Leading projects from conception to completion with agile methodologies.
                   </p>
                 </div>
               </div>
