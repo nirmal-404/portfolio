@@ -13,13 +13,6 @@ import ProjectsSection from '@/components/ProjectsSection';
 import CertificationsSection from '@/components/CertificationsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-const aboutViews = {
-  overview: AboutSection,
-  experience: ExperienceSection,
-  skills: SkillsSection,
-  education: EducationSection,
-  certifications: CertificationsSection
-};
 export default function Home() {
   const {
     pathname,
@@ -29,8 +22,8 @@ export default function Home() {
   const hashTarget = hash.replace(/^#/, '');
   const targetFromPath = pathParts[0] || 'home';
   const target = hashTarget || targetFromPath;
-  const aboutKey = pathParts[0] === 'about' ? (pathParts[1] || 'overview') : hashTarget.startsWith('about/') ? hashTarget.split('/')[1] : 'overview';
-  const view = ['work', 'projects'].includes(target) ? 'work' : target === 'about' || Object.hasOwn(aboutViews, aboutKey) ? 'about' : 'home';
+  const isAboutTarget = pathParts[0] === 'about' || hashTarget === 'about' || hashTarget.startsWith('about/');
+  const view = ['work', 'projects'].includes(target) ? 'work' : isAboutTarget ? 'about' : 'home';
   const contact = useRef(null),
     main = useRef(null),
     initial = useRef(true);
