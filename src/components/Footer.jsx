@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowUp } from "lucide-react";
+import { Link } from 'react-router-dom';
 import { siFacebook, siGithub, siMedium } from 'simple-icons';
 import { Linkedin } from 'lucide-react';
 
@@ -37,7 +38,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <nav aria-label="Footer navigation" className="flex gap-5 text-sm text-muted-foreground"><a href="/">Home</a><a href="/work">Work</a><a href="/about">About</a></nav>
+                <nav aria-label="Footer navigation" className="flex gap-5 text-sm text-muted-foreground"><Link to="/">Home</Link><Link to="/work">Work</Link><Link to="/about">About</Link></nav>
 
                 <div className="flex items-center gap-3">
                     {socialLinks.map((link) => (
@@ -58,13 +59,13 @@ const Footer = () => {
                             )}
                         </a>
                     ))}
-                    <a
-                        href="/"
+                    <Link
+                        to="/"
                         aria-label="Go home"
                         className="ml-1 flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:opacity-90"
                     >
                         <ArrowUp size={18} />
-                    </a>
+                    </Link>
                 </div>
             </div>
         </footer>

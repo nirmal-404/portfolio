@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -29,9 +30,9 @@ const HeroSection = ({ onContact }) => {
                 </p>
 
                 <div className='pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-delay-4'>
-                    <a href="/work" className='cosmic-button'>
+                    <Link to="/work" className='cosmic-button'>
                         View my work
-                    </a>
+                    </Link>
                     <a onClick={e => { e.preventDefault(); onContact() }} href="#contact" className='px-6 py-3 rounded-md border border-border bg-card/40 font-semibold text-foreground transition-all duration-300 hover:border-primary/60 hover:bg-primary/10'>
                         Start a conversation
                     </a>

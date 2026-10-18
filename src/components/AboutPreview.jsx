@@ -1,4 +1,6 @@
 import { ArrowUpRight, Code2, Award } from 'lucide-react'
+import { createElement } from 'react'
+import { Link } from 'react-router-dom'
 
 const credentials = [
   {
@@ -49,12 +51,12 @@ export default function AboutPreview() {
       </h2>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
         {credentials.map(({ title, organization, detail, highlights, href, logo, icon: Icon }, index) => (
-          <a key={title} href={href} className={`group rounded-xl border border-border bg-card/80 p-5 transition-colors hover:border-primary/60 hover:bg-primary/5 ${index < 2 ? 'lg:col-span-3' : 'lg:col-span-2'} ${index === 4 ? 'sm:col-span-2' : ''}`}>
+          <Link key={title} to={href} className={`group rounded-xl border border-border bg-card/80 p-5 transition-colors hover:border-primary/60 hover:bg-primary/5 ${index < 2 ? 'lg:col-span-3' : 'lg:col-span-2'} ${index === 4 ? 'sm:col-span-2' : ''}`}>
             <div className="mb-3 flex items-center justify-between text-primary">
               {logo ? (
                 <img src={logo} alt={`${organization} logo`} width={48} height={48} className="h-12 w-12 object-contain" />
               ) : (
-                <span className="flex h-12 w-12 items-center justify-center"><Icon size={24} aria-hidden="true" /></span>
+                <span className="flex h-12 w-12 items-center justify-center">{createElement(Icon, { size: 24, 'aria-hidden': true })}</span>
               )}
               <ArrowUpRight size={17} aria-hidden="true" />
             </div>
@@ -66,7 +68,7 @@ export default function AboutPreview() {
                 {highlights.map(highlight => <li key={highlight}>{highlight}</li>)}
               </ul>
             )}
-          </a>
+          </Link>
         ))}
       </div>
     </section>
