@@ -31,8 +31,6 @@ export default function Home() {
   const target = hashTarget || targetFromPath;
   const aboutKey = pathParts[0] === 'about' ? (pathParts[1] || 'overview') : hashTarget.startsWith('about/') ? hashTarget.split('/')[1] : 'overview';
   const view = ['work', 'projects'].includes(target) ? 'work' : target === 'about' || Object.hasOwn(aboutViews, aboutKey) ? 'about' : 'home';
-  const activeAbout = Object.hasOwn(aboutViews, aboutKey) ? aboutKey : 'overview';
-  const AboutContent = aboutViews[activeAbout];
   const contact = useRef(null),
     main = useRef(null),
     initial = useRef(true);
@@ -54,6 +52,12 @@ export default function Home() {
   return <div className="portfolio-app min-h-screen bg-background text-foreground overflow-x-hidden"><StraBackground /><Navbar view={view} onContact={() => contact.current.showModal()} /><main ref={main} tabIndex={-1} className="portfolio-main"><div key={view} className="view-enter">
  {view === 'home' && <><HeroSection onContact={() => contact.current.showModal()} /><AboutPreview /><ProjectsSection featured /></>}
  {view === 'work' && <ProjectsSection />}
- {view === 'about' && <div className="about-view"><div className="container max-w-6xl"><p className="section-kicker">The person behind the work</p><h1 className="text-4xl sm:text-5xl font-bold mb-8">A little <span className="text-primary">about me.</span></h1><nav className="about-navigation" aria-label="About sections">{Object.keys(aboutViews).map(key => <a key={key} href={'/about/' + key} aria-current={key === activeAbout ? 'page' : undefined}>{key[0].toUpperCase() + key.slice(1)}</a>)}</nav></div><div key={activeAbout} className="about-content view-enter"><AboutContent onContact={() => contact.current.showModal()} /></div></div>}
+ {view === 'about' && <div className="about-view">
+   <AboutSection onContact={() => contact.current.showModal()} />
+   <ExperienceSection />
+   <SkillsSection />
+   <EducationSection />
+   <CertificationsSection />
+ </div>}
  </div></main><Footer /><dialog ref={contact} className="portfolio-dialog contact-dialog" aria-label="Get in touch"><button className="dialog-close" aria-label="Close contact" onClick={() => contact.current.close()}><X /></button><ContactSection /></dialog></div>;
 }
