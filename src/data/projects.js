@@ -14,7 +14,7 @@ const projects = [
         title: "HealthSense AI",
         description: "A hospital management system with an AI-powered symptom checker.",
         image: "/projects/24_HealthSenseAI.png",
-        tags: ["React", "Microservices", "Langgraph", "Tailwind", "Firebase", "Node.js", "Docker", "K8s"],
+        tags: ["React", "Microservices", "LangGraph", "Tailwind", "Firebase", "Node.js", "Docker", "Kubernetes"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/HealthSenseAI" },
         ]
@@ -24,7 +24,7 @@ const projects = [
         title: "EcoShore",
         description: "A waste management platform with beach cleanup event management.",
         image: "/projects/23_Ecoshore.png",
-        tags: ["React", "ShadCn UI", "Tailwind", "Redux", "Firebase", "Node.js", "JWT", "MongoDB"],
+        tags: ["React", "shadcn/ui", "Tailwind CSS", "Redux", "Firebase", "Node.js", "JWT", "MongoDB"],
         urls: [
             { module: "(FE)", type: "github", href: "https://github.com/nirmal-404/EcoShore-Frontend" },
             { module: "(BE)", type: "github", href: "https://github.com/nirmal-404/EcoShore-Backend" }
@@ -48,7 +48,7 @@ const projects = [
         title: "Feastr — Mobile App",
         description: "A cross-platform mobile application built with React Native.",
         image: "/projects/21_feastr.jpg",
-        tags: ["React Native", "Appwrite", "Sentry", "Zustand", "Native Wind", "Expo", "Mobile App",],
+        tags: ["React Native", "Appwrite", "Sentry", "Zustand", "NativeWind", "Expo", "Mobile App",],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/Feastr" }
         ]
@@ -70,7 +70,7 @@ const projects = [
         title: "Patient Management System",
         description: "A microservices-based REST API built with Spring Boot.",
         image: "/projects/19_patient-management.png",
-        tags: ["Java", "SpringBoot", "Microservices", "Kafka", "Postgre", "gRPC", "Protobuf", "LocalStack"],
+        tags: ["Java", "Spring Boot", "Microservices", "Kafka", "PostgreSQL", "gRPC", "Protobuf", "LocalStack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/springboot-patient-managemnt-system" }
         ]
@@ -81,7 +81,7 @@ const projects = [
         title: "Asset Management System",
         description: "An asset management system where users submit assets for admin approval and purchase.",
         image: "/projects/18_asset-management.png",
-        tags: ["Next JS", "Postgres", "Cloudinary", "Drizzle", "ShadCN UI", "Better Auth", "React", "Paypal"],
+        tags: ["Next.js", "PostgreSQL", "Cloudinary", "Drizzle", "shadcn/ui", "Better Auth", "React", "PayPal"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/asset-manger" }
         ]
@@ -92,7 +92,7 @@ const projects = [
         title: "Blog Application",
         description: "A blogging platform where users can create, edit, delete, and read posts.",
         image: "/projects/17_nextjs-blog.png",
-        tags: ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React",],
+        tags: ["Next.js", "Zustand", "Drizzle", "shadcn/ui", "Better Auth", "React",],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/nextjs-blog" }
         ]
@@ -115,7 +115,7 @@ const projects = [
         title: "FitTrack",
         description: "Tracks fitness data with PostgreSQL and MongoDB, and uses Gemini AI to provide personalized tips and recommendations.",
         image: "/projects/15_fit-tack.png",
-        tags: ["Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL + Mongo DB", "Gemini"],
+        tags: ["Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL", "MongoDB", "Gemini"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/springboot-microservices" },
         ]
