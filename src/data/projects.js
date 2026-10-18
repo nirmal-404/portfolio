@@ -14,7 +14,7 @@ const projects = [
         title: "HealthSense AI",
         description: "A hospital management system with an AI-powered symptom checker.",
         image: "/projects/24_HealthSenseAI.png",
-        tags: ["React", "Microservices", "LangGraph", "Tailwind", "Firebase", "Node.js", "Docker", "Kubernetes"],
+        tags: ["React", "Microservices", "LangGraph", "Tailwind CSS", "Firebase", "Node.js", "Docker", "Kubernetes"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/HealthSenseAI" },
         ]
@@ -34,9 +34,9 @@ const projects = [
     {
         id: 22,
         title: "ChatApp",
-        description: "A real-time chat app with secure user-to-user messaging using Socket.IO and MongoDB.",
+        description: "A real-time chat application with secure user-to-user messaging using Socket.IO and MongoDB.",
         image: "/projects/22_chat-app.png",
-        tags: ["React", "DaisyUI", "Tailwind", "Zustand", "Socket.IO", "Node.js", "JWT", "MongoDB"],
+        tags: ["React", "daisyUI", "Tailwind CSS", "Zustand", "Socket.IO", "Node.js", "JWT", "MongoDB"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/ChatApp" } // Replace with correct link if different
         ]
@@ -126,7 +126,7 @@ const projects = [
         title: "AI-Powered Canvas",
         description: "An AI-powered canvas that solves equations and recognizes drawings using the Gemini API.",
         image: "/projects/14_ai-canvas.png",
-        tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
+        tags: ["React", "Tailwind CSS", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/AI-Powered-Handwriting-processor" },
             // { type: "external", href: "https://ai-powered-handwriting-processor.vercel.app" },
@@ -139,7 +139,7 @@ const projects = [
         title: "Rasaa Agro Products",
         description: "An e-commerce platform built with the MERN stack. Integrations with payment gateways and email services.",
         image: "/projects/13_mern-ecommerce.png",
-        tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind", "ShadCN UI", "Full-Stack"],
+        tags: ["MongoDB", "Express", "React", "Node.js", "Redux", "Tailwind CSS", "shadcn/ui", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/Rasaa-Spices" },
         ]
@@ -170,7 +170,7 @@ const projects = [
     {
         id: 10,
         title: "PyQt5 GUI Projects",
-        description: "A collection of simple desktop apps built with PyQt5, including a weather app, stopwatch, and digital clock.",
+        description: "A collection of desktop applications built with PyQt5, including a weather app, stopwatch, and digital clock.",
         image: "/projects/10_pyqt5-gui-projects.jpg",
         tags: ["Python", "PyQt5", "OpenWeatherMap"],
         urls: [
@@ -183,7 +183,7 @@ const projects = [
         title: "Java MVC E-Commerce System",
         description: "An e-commerce application built with Java Servlets, JSP, and the MVC architecture, styled with Tailwind CSS.",
         image: "/projects/09_jsp-ecommerce.png",
-        tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind", "Full-Stack"],
+        tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind CSS", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/oop-group-project" },
         ]
@@ -192,7 +192,7 @@ const projects = [
     {
         id: 8,
         title: "Zombie Shooter Game",
-        description: "A 2D shooter game built with HTML, CSS, and JS, inspired after playing The Last of Us Part 1.",
+        description: "A 2D shooter game built with HTML, CSS, and JavaScript, inspired by The Last of Us Part I.",
         image: "/projects/08_tlou-(-2.0).png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
