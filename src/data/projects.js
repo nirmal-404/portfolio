@@ -11,8 +11,8 @@ const projects = [
     },
     {
         id: 24,
-        title: "HealthSenseAi",
-        description: "A hospital mangement system with AI symptom check",
+        title: "HealthSense AI",
+        description: "A hospital management system with an AI-powered symptom checker.",
         image: "/projects/24_HealthSenseAI.png",
         tags: ["React", "Microservices", "Langgraph", "Tailwind", "Firebase", "Node.js", "Docker", "K8s"],
         urls: [
@@ -21,8 +21,8 @@ const projects = [
     },
     {
         id: 23,
-        title: "Ecoshore",
-        description: "A waste mangement and beach cleanup event mangement system",
+        title: "EcoShore",
+        description: "A waste management platform with beach cleanup event management.",
         image: "/projects/23_Ecoshore.png",
         tags: ["React", "ShadCn UI", "Tailwind", "Redux", "Firebase", "Node.js", "JWT", "MongoDB"],
         urls: [
@@ -30,7 +30,7 @@ const projects = [
             { module: "(BE)", type: "github", href: "https://github.com/nirmal-404/EcoShore-Backend" }
         ]
     },
-    // 22. ChatApp - React native
+    // 22. ChatApp
     {
         id: 22,
         title: "ChatApp",
@@ -42,18 +42,18 @@ const projects = [
         ]
     },
 
-    // 21. Feastr - React native
+    // 21. Feastr mobile app
     {
         id: 21,
-        title: "Feastr - Mobile App",
-        description: "A cross platform mobile aplication built using react native",
+        title: "Feastr — Mobile App",
+        description: "A cross-platform mobile application built with React Native.",
         image: "/projects/21_feastr.jpg",
         tags: ["React Native", "Appwrite", "Sentry", "Zustand", "Native Wind", "Expo", "Mobile App",],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/Feastr" }
         ]
     },
-    // 20. Patient managemt System
+    // 20. Restaurant POS desktop app
     {
         id: 20,
         title: "Restaurant POS Desktop App",
@@ -64,40 +64,40 @@ const projects = [
             { type: "github", href: "https://github.com/nirmal-404/Resturant-POS-.NET" }
         ]
     },
-    // 19. Patient managemt System
+    // 19. Patient management system
     {
         id: 19,
-        title: "Patient managemt System",
-        description: "Microservices based rest api using Springboot",
+        title: "Patient Management System",
+        description: "A microservices-based REST API built with Spring Boot.",
         image: "/projects/19_patient-management.png",
         tags: ["Java", "SpringBoot", "Microservices", "Kafka", "Postgre", "gRPC", "Protobuf", "LocalStack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/springboot-patient-managemnt-system" }
         ]
     },
-    // 18. asset management
+    // 18. Asset management
     {
         id: 18,
-        title: "Asset Managemt System",
-        description: "A system where users add assets, admins approve them, and users can purchase.",
+        title: "Asset Management System",
+        description: "An asset management system where users submit assets for admin approval and purchase.",
         image: "/projects/18_asset-management.png",
         tags: ["Next JS", "Postgres", "Cloudinary", "Drizzle", "ShadCN UI", "Better Auth", "React", "Paypal"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/asset-manger" }
         ]
     },
-    // 17. next js blog
+    // 17. Next.js blog
     {
         id: 17,
         title: "Blog Application",
-        description: "A blog where users can create blogs, update and delete their blogs and view / read all blogs.",
+        description: "A blogging platform where users can create, edit, delete, and read posts.",
         image: "/projects/17_nextjs-blog.png",
         tags: ["Next JS", "Zustand", "Drizzle", "ShadCN UI", "better Auth", "React",],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/nextjs-blog" }
         ]
     },
-    // 16. finace-traceker
+    // 16. Finance tracker
     {
         id: 16,
         title: "Finance Tracker",
@@ -113,7 +113,7 @@ const projects = [
     {
         id: 15,
         title: "FitTrack",
-        description: "Logged fitness data with PostgreSQL & MongoDB. Used Gemini AI for smart tips and recommendations.",
+        description: "Tracks fitness data with PostgreSQL and MongoDB, and uses Gemini AI to provide personalized tips and recommendations.",
         image: "/projects/15_fit-tack.png",
         tags: ["Spring Boot", "Eureka", "Keycloak", "Spring Cloud", "RabbitMQ", "PostgreSQL + Mongo DB", "Gemini"],
         urls: [
@@ -124,7 +124,7 @@ const projects = [
     {
         id: 14,
         title: "AI-Powered Canvas",
-        description: "An AI-powered canvas capable of solving equations, recognizing drawings. - powered by Gemini API.",
+        description: "An AI-powered canvas that solves equations and recognizes drawings using the Gemini API.",
         image: "/projects/14_ai-canvas.png",
         tags: ["React", "Tailwind", "TypeScript", "Python", "AI", "Gemini", "Full-Stack"],
         urls: [
@@ -133,7 +133,7 @@ const projects = [
 
         ]
     },
-    // 13. MERN Stack E-Commerce Platform
+    // 13. MERN stack e-commerce platform
     {
         id: 13,
         title: "Rasaa Agro Products",
@@ -144,29 +144,29 @@ const projects = [
             { type: "github", href: "https://github.com/nirmal-404/Rasaa-Spices" },
         ]
     },
-    // 12. microservices restapi - social media microservice
+    // 12. Microservices REST API
     {
         id: 12,
         title: "Microservices REST API",
-        description: "A modular REST API built using a microservices architecture *Redis caching *rate limiting *RabbitMQ.",
+        description: "A modular microservices REST API with Redis caching, rate limiting, and RabbitMQ messaging.",
         image: "/projects/12_nodejs-microservices-backend.png",
         tags: ["Node.js", "Express", "Redis", "Docker", "RabbitMQ", "Cloudinary", "Backend"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/node-concepts-IN/tree/main/social-media-microservice" }
         ]
     },
-    // 11. postgres restapi
+    // 11. PostgreSQL REST API
     {
         id: 11,
-        title: "Postgres REST API",
-        description: "A REST API using PostgreSQL and Prisma ORM - Graphana",
+        title: "PostgreSQL REST API",
+        description: "A REST API built with PostgreSQL and Prisma ORM, with Prometheus and Grafana monitoring.",
         image: "/projects/11_docker-prisma-prometheus-graphan.png",
         tags: ["PostgreSQL", "Prisma", "Prometheus", "Grafana", "Docker", "Backend"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/node-concepts-ad/tree/main/postgres/postgress-with-prisma" }
         ]
     },
-    // 10. PyQt5 GUI Projects
+    // 10. PyQt5 GUI projects
     {
         id: 10,
         title: "PyQt5 GUI Projects",
@@ -177,21 +177,21 @@ const projects = [
             { type: "github", href: "https://github.com/nirmal-404/python" },
         ]
     },
-    // 9. Java MVC E-Commerce System
+    // 9. Java MVC e-commerce system
     {
         id: 9,
         title: "Java MVC E-Commerce System",
-        description: "An e-commerce application built using Java Servlets, JSP, and the MVC architecture and styled with Tailwind CSS",
+        description: "An e-commerce application built with Java Servlets, JSP, and the MVC architecture, styled with Tailwind CSS.",
         image: "/projects/09_jsp-ecommerce.png",
         tags: ["Java", "MVC", "Servlet", "JSP", "Tailwind", "Full-Stack"],
         urls: [
             { type: "github", href: "https://github.com/nirmal-404/oop-group-project" },
         ]
     },
-    // 8. TLoU-(-2.0)
+    // 8. Zombie shooter game
     {
         id: 8,
-        title: "Zombie Shooter game",
+        title: "Zombie Shooter Game",
         description: "A 2D shooter game built with HTML, CSS, and JS, inspired after playing The Last of Us Part 1.",
         image: "/projects/08_tlou-(-2.0).png",
         tags: ["HTML", "CSS", "JavaScript"],
@@ -200,11 +200,11 @@ const projects = [
             { type: "external", href: "https://tlou-2-0.vercel.app" },
         ]
     },
-    // 7. Statistic Calcuator
+    // 7. Statistics calculator
     {
         id: 7,
-        title: "Statistic Calculator",
-        description: "A program that callulates and finds the mean, median, mode, range and the variance",
+        title: "Statistics Calculator",
+        description: "Calculates the mean, median, mode, range, and variance of a data set.",
         image: "/projects/07_statistical-calculator.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
@@ -216,7 +216,7 @@ const projects = [
     {
         id: 6,
         title: "Music Player",
-        description: "A simple music player with functions play, pause, skip, shuffle, and delete songs from a playlist",
+        description: "A simple music player with controls to play, pause, skip, shuffle, and remove songs from a playlist.",
         image: "/projects/06_music-player.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
@@ -227,8 +227,8 @@ const projects = [
     // 5. Number sorter
     {
         id: 5,
-        title: "Number sorter",
-        description: "A number sorting porgam build using html css and js",
+        title: "Number Sorter",
+        description: "A number-sorting program built with HTML, CSS, and JavaScript.",
         image: "/projects/05_number-sorter.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
@@ -236,11 +236,11 @@ const projects = [
             { type: "external", href: "https://number-sorting-xi.vercel.app" },
         ]
     },
-    // 4. Tik-Tac-Toe
+    // 4. Tic-Tac-Toe
     {
         id: 4,
-        title: "Tik-Tac-Toe",
-        description: "Tic Tac Toe game build using html css and js that can be played against the computer",
+        title: "Tic-Tac-Toe",
+        description: "A Tic-Tac-Toe game built with HTML, CSS, and JavaScript, playable against the computer.",
         image: "/projects/04_tik-tac-toe.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
@@ -248,11 +248,11 @@ const projects = [
             { type: "external", href: "https://tic-tac-toe-nine-psi-14.vercel.app/" },
         ]
     },
-    // 3. Rock paper Scissor
+    // 3. Rock Paper Scissors
     {
         id: 3,
-        title: "Rock Paper Scissor",
-        description: "A Rock paper scissor game that can be payed against computer",
+        title: "Rock Paper Scissors",
+        description: "A Rock Paper Scissors game you can play against the computer.",
         image: "/projects/03_rock-paper-scissor.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
@@ -260,11 +260,11 @@ const projects = [
             { type: "external", href: "https://rock-paper-scissor-smoky-delta.vercel.app" },
         ]
     },
-    // 2. Roman number Converter - have not pushed to github
+    // 2. Roman numeral converter
     {
         id: 2,
-        title: "Roman Number Converter",
-        description: "A simpe roman conveter built usiing html css and js",
+        title: "Roman Numeral Converter",
+        description: "A Roman numeral converter built with HTML, CSS, and JavaScript.",
         image: "/projects/02_roman-number-converter.png",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [
@@ -272,11 +272,11 @@ const projects = [
             { type: "external", href: "https://decimal-to-roman-number-converter.vercel.app/" },
         ]
     },
-    // 1. Decimal to Binary Converter
+    // 1. Decimal-to-binary converter
     {
         id: 1,
-        title: "Decimal to Binary Converter",
-        description: "A decimal to binary conveter with animations of showing the call stack",
+        title: "Decimal-to-Binary Converter",
+        description: "Converts decimal numbers to binary and animates the call stack during conversion.",
         image: "/projects/01_dec-to-bin-coverter.gif",
         tags: ["HTML", "CSS", "JavaScript"],
         urls: [

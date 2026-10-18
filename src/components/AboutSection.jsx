@@ -2,7 +2,6 @@
 
 import { Briefcase, Code, User } from 'lucide-react'
 import React from 'react'
-import { motion } from 'framer-motion'
 
 const AboutSection = ({ onContact }) => {
   return (
@@ -46,7 +45,7 @@ const AboutSection = ({ onContact }) => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className='text-left'>
-                  <h4 className='font-semibold text-lg'>Web Delvelopment</h4>
+                  <h4 className='font-semibold text-lg'>Web Development</h4>
                   <p className='text-muted-foreground'>
                     Creating responsive websites and web applications with modern frameworks
                   </p>
